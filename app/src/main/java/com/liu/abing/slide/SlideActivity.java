@@ -1,9 +1,12 @@
 package com.liu.abing.slide;
 
 import android.os.Bundle;
+import android.view.View;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
+import com.liu.abing.slide.recycard.MainActivity2;
+import com.tools.Tools;
 import com.tools.util.ToastUtil;
 import com.tools.views.viewpager.LViewPager;
 
@@ -42,6 +45,15 @@ public class SlideActivity extends BaseActivity {
             @Override
             public void onItemClick(int postion) {
                 ToastUtil.customShow(SlideActivity.this,postion+"");
+            }
+        });
+
+
+
+        findViewById(R.id.but_recycard).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(SlideActivity.this,null, MainActivity2.class);
             }
         });
     }
