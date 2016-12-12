@@ -13,5 +13,5 @@
          android:id="@+id/but_recycard"
          android:layout_width="match_parent"
          android:layout_height="wrap_content"
-         android:text="rectcleView 广告"/>
+         android:text="RecyclerView 广告"/>
 </LinearLayout>

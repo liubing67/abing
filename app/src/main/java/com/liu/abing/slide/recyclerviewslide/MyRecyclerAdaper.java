@@ -1,4 +1,4 @@
-package com.liu.abing.slide.recycard;
+package com.liu.abing.slide.recyclerviewslide;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -21,7 +21,6 @@ public class MyRecyclerAdaper extends RecyclerView.Adapter<MyRecyclerAdaper.MyVi
 
     private  final List<String> mList;
     private final Context mContext;
-    private OnIndexListener onIndexListener;
     public MyRecyclerAdaper(List<String> list, Context context){
         this.mContext = context;
         if(list == null){
@@ -29,14 +28,6 @@ public class MyRecyclerAdaper extends RecyclerView.Adapter<MyRecyclerAdaper.MyVi
         }else{
             this.mList = list;
         }
-    }
-
-    public interface OnIndexListener{
-        void myIndexListener(int currentIndex,int allSize);
-    }
-    public void setOnIndexListener(OnIndexListener onIndexListener)
-    {
-        this.onIndexListener=onIndexListener;
     }
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -51,7 +42,6 @@ public class MyRecyclerAdaper extends RecyclerView.Adapter<MyRecyclerAdaper.MyVi
         //设置第一个与最后item对称显示
         RecyclerScaleUtils.onBindViewHolder(holder.itemView,position, getItemCount(), ScreenUtils.dip2px(holder.itemView.getContext(),30f));
         Glide.with(mContext).load(mList.get(position)).centerCrop().into(holder.mImageview);
-        onIndexListener.myIndexListener(position,mList.size());
     }
 
     @Override

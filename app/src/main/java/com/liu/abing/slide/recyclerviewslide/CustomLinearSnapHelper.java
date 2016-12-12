@@ -1,4 +1,4 @@
-package com.liu.abing.slide.recycard;
+package com.liu.abing.slide.recyclerviewslide;
 
 import android.support.v7.widget.LinearSnapHelper;
 import android.util.Log;

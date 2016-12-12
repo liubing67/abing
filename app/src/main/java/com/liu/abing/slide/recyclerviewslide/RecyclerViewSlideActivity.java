@@ -1,26 +1,14 @@
-package com.liu.abing.slide.recycard;
+package com.liu.abing.slide.recyclerviewslide;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
-import com.bumptech.glide.Glide;
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
-import com.orhanobut.logger.Logger;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -31,17 +19,15 @@ import java.util.List;
  * Created by yuantongqin on 2016/11/16.
  */
 
-public class MainActivity2 extends BaseActivity {
+public class RecyclerViewSlideActivity extends BaseActivity {
 
     private RecyclerView recycler;
     private TextView text_index;
-    private PageRecyclerView.PageAdapter myAdapter = null;
+    private PageIndicatorView pageIndicatorView;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycard);
-
-
+        setContentView(R.layout.activity_recyclerviewslide);
 
         initView();
     }
@@ -49,6 +35,7 @@ public class MainActivity2 extends BaseActivity {
     {
         text_index= (TextView) findViewById(R.id.text_index);
         recycler = (RecyclerView) findViewById(R.id.recyclerView);
+        pageIndicatorView= (PageIndicatorView) findViewById(R.id.indicator);
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false);
         recycler.setLayoutManager(manager);
         final List<String> mlist = new ArrayList<>();
@@ -65,28 +52,17 @@ public class MainActivity2 extends BaseActivity {
         mlist.addAll(Arrays.asList(images));
         MyRecyclerAdaper adaper = new MyRecyclerAdaper(mlist,this);
         recycler.setAdapter(adaper);
-        RecyclerScaleUtils utils = new RecyclerScaleUtils();
+        final RecyclerScaleUtils utils = new RecyclerScaleUtils();
         utils.attachToRecyclerView(recycler,ScreenUtils.dip2px(this,30f));
-        utils.setItemPosition(1);
-        adaper.setOnIndexListener(new MyRecyclerAdaper.OnIndexListener() {
+//        utils.setItemPosition(1);//设置当前页
+        pageIndicatorView.initIndicator(mlist.size());//设置一共多少页
+        utils.setOnIndexListener(new RecyclerScaleUtils.OnIndexListener() {
             @Override
-            public void myIndexListener(int currentIndex, int allSize) {
-                text_index.setText((currentIndex+1)+"/"+allSize);
+            public void myIndexListener(int currentIndex) {
+                pageIndicatorView.setSelectedPage(currentIndex);
+                text_index.setText(currentIndex+"/"+mlist.size());
             }
         });
-        recycler.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-                Logger.d(newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-            }
-        });
-
     }
 
 }

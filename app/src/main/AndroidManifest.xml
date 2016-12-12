@@ -22,7 +22,7 @@
         </activity>
         <activity android:name=".NewsDetailActivity"/>
         <activity android:name=".slide.SlideActivity"/>
-        <activity android:name=".slide.recycard.MainActivity2"/>
+        <activity android:name=".slide.recyclerviewslide.RecyclerViewSlideActivity"/>
     </application>
 
 </manifest>

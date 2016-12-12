@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
-import com.liu.abing.slide.recycard.MainActivity2;
+import com.liu.abing.slide.recyclerviewslide.RecyclerViewSlideActivity;
 import com.tools.Tools;
 import com.tools.util.ToastUtil;
 import com.tools.views.viewpager.LViewPager;
@@ -53,7 +53,7 @@ public class SlideActivity extends BaseActivity {
         findViewById(R.id.but_recycard).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(SlideActivity.this,null, MainActivity2.class);
+                Tools.startActivity(SlideActivity.this,null, RecyclerViewSlideActivity.class);
             }
         });
     }
