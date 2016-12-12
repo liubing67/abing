@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text=""
+        android:visibility="gone" />
+    <com.demievil.library.RefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+    <ListView
+        android:id="@+id/mListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="#ffdddddd"
+        android:dividerHeight="0.5dp"
+        android:fadingEdge="none"
+        android:scrollbars="none" /></com.demievil.library.RefreshLayout>
+
+</RelativeLayout>
