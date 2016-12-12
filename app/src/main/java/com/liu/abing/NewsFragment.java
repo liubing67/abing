@@ -112,7 +112,7 @@ public class NewsFragment extends Fragment {
 		refreshListener();
 
 
-		
+
 		mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 			@Override
 			public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
