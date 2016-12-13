@@ -3,15 +3,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
+
     <com.tools.views.viewpager.LViewPager
         android:id="@+id/lviewpager"
         android:layout_width="match_parent"
         android:layout_height="170dp"
-        android:layout_below="@+id/top_rel"
-        />
-     <Button
-         android:id="@+id/but_recycard"
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-         android:text="RecyclerView 广告"/>
+        android:layout_below="@+id/top_rel" />
+
+    <com.tools.views.UpRollView
+        android:id="@+id/roll"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:id="@+id/but_recycard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RecyclerView 广告" />
 </LinearLayout>
