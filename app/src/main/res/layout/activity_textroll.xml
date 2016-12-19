@@ -3,19 +3,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <com.tools.views.MarqueeText
-        android:id="@+id/text_notify"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:ellipsize="marquee"
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:scrollHorizontally="true"
-        android:marqueeRepeatLimit="marquee_forever"
-        android:singleLine="true"
-        android:text="因提款需经人工审核，提款及客服服务时间为每日 9:00 - 21:00"
-        android:textColor="#ee8800"
-        android:textSize="14sp" />
+    <LinearLayout
+        android:id="@+id/rela_notify"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/top_rel"
+        android:background="#ffedd6">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:background="@mipmap/list_icon_notice" />
+
+        <com.tools.views.MarqueeText
+            android:id="@+id/text_notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:scrollHorizontally="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:text="因提款需经人工审核，提款及客服服务时间为每日 9:00 - 21:00"
+            android:textColor="#ee8800"
+            android:textSize="14sp" />
+    </LinearLayout>
 </LinearLayout>
