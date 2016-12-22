@@ -5,7 +5,12 @@
         <item name="colorPrimaryDark">@color/themecolor</item>
         <item name="windowNoTitle">true</item>
     </style>
-
+    <style name="StepTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     //进入应用时防止白屏
     <style name="NoWhiteAppTheme" parent="AppTheme">
         <item name="android:windowIsTranslucent">true</item>

@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.tools.views.StepsView
+    <com.tools.views.steps.StepsView
         android:id="@+id/stepsView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="50dp" />
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,5 +33,9 @@
             android:id="@+id/btn_back"
             />
     </LinearLayout>
-
+    <Button
+        android:id="@+id/but_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="步骤"/>
 </LinearLayout>

@@ -1,4 +1,4 @@
-package com.tools.views;
+package com.tools.views.steps;
 
 import android.content.Context;
 import android.graphics.Canvas;

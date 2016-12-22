@@ -27,6 +27,11 @@
         <activity android:name=".steps.StepsHActivity"/>
         <activity android:name=".drag.DragLActivity"/>
         <activity android:name=".shopcar.ShopCarActivity"/>
+        <activity android:name=".steps.step.fragment.StepActivity"
+            android:theme="@style/StepTheme">
+
+        </activity>
+        <activity android:name=".steps.step.fragment.TestHorizontalStepViewActivity"/>
     </application>
 
 </manifest>

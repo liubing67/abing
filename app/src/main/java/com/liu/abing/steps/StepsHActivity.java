@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+
 import com.liu.abing.R;
-import com.tools.views.StepsView;
+import com.liu.abing.steps.step.fragment.StepActivity;
+import com.tools.Tools;
+import com.tools.views.steps.StepsView;
 
 /**
  * 项目名称：abing
@@ -21,6 +24,7 @@ public class StepsHActivity extends Activity {
 
     private StepsView stepsView;
     private float eventX = 0.0f;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,9 +32,9 @@ public class StepsHActivity extends Activity {
 
         initView();
     }
-    private void initView()
-    {
-        stepsView= (StepsView) findViewById(R.id.stepsView);
+
+    private void initView() {
+        stepsView = (StepsView) findViewById(R.id.stepsView);
         stepsView.setTitle(new String[]{"填写邮箱", "验证邮箱", "填写密码", "完善个人信息"});
         stepsView.setPosition(2);
 
@@ -45,14 +49,21 @@ public class StepsHActivity extends Activity {
             public void onClick(View v) {
                 stepsView.reset();
             }
-        }); findViewById(R.id.btn_back).setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            stepsView.back();
-        }
-    });
-
+        });
+        findViewById(R.id.btn_back).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                stepsView.back();
+            }
+        });
+        findViewById(R.id.but_step).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(StepsHActivity.this,null, StepActivity.class);
+            }
+        });
     }
+
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         //获取手指在屏幕上的坐标
