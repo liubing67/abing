@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.liu.abing.ColorGradActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
 import com.liu.abing.roll.TextViewRollActivity;
@@ -64,6 +65,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, ShopCarActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_colorgrad).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, ColorGradActivity.class);
             }
         });
     }

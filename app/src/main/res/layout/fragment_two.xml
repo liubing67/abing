@@ -52,6 +52,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="仿淘宝购物车"/>
+            <Button
+                android:id="@+id/but_colorgrad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="标题栏颜色渐变"/>
         </LinearLayout>
 
     </ScrollView>

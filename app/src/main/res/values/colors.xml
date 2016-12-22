@@ -301,4 +301,5 @@
     <color name="uncompleted_color">#A3E0D9</color>
     <color name="uncompleted_text_color">#F8F8F8</color>
     <color name="stepbackground">#00BEAF</color>
+    <color name="transparent">#00000000</color>
 </resources>
