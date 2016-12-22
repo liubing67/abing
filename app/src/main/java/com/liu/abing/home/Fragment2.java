@@ -6,8 +6,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
 import com.liu.abing.roll.TextViewRollActivity;
+import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.tools.Tools;
@@ -50,6 +52,18 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, StepsHActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_drag).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, DragLActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_shopcar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, ShopCarActivity.class);
             }
         });
     }

@@ -25,6 +25,8 @@
         <activity android:name=".slide.recyclerviewslide.RecyclerViewSlideActivity"/>
         <activity android:name=".roll.TextViewRollActivity"/>
         <activity android:name=".steps.StepsHActivity"/>
+        <activity android:name=".drag.DragLActivity"/>
+        <activity android:name=".shopcar.ShopCarActivity"/>
     </application>
 
 </manifest>

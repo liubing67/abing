@@ -5,8 +5,6 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-
 import com.liu.abing.R;
 import com.tools.views.StepsView;
 

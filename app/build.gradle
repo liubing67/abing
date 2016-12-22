@@ -35,4 +35,6 @@ dependencies {
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.orhanobut:logger:1.15'
     compile 'com.android.support:cardview-v7:24.0.0'
+    compile files('libs/nineoldandroids-2.4.0.jar')//draglayout 侧滑所需
+    compile 'com.google.code.gson:gson:2.2.4'
 }
