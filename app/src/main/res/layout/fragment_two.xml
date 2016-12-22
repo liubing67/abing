@@ -37,6 +37,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="文字滚动"/>
+            <Button
+                android:id="@+id/but_step"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="步骤"/>
         </LinearLayout>
 
     </ScrollView>

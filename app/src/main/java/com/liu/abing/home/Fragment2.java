@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.liu.abing.R;
 import com.liu.abing.roll.TextViewRollActivity;
 import com.liu.abing.slide.SlideActivity;
+import com.liu.abing.steps.StepsHActivity;
 import com.tools.Tools;
 
 /**
@@ -43,6 +44,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, TextViewRollActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_step).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, StepsHActivity.class);
             }
         });
     }
