@@ -57,7 +57,7 @@ public class IndexBarActivity extends BaseActivity {
         mRv.setAdapter(mAdapter);
         mRv.addItemDecoration(mDecoration = new SuspensionDecoration(this, mDatas));
         //如果add两个，那么按照先后顺序，依次渲染。
-        //mRv.addItemDecoration(new TitleItemDecoration2(this,mDatas));
+//        mRv.addItemDecoration(new TitleItemDecoration2(this,mDatas));
         mRv.addItemDecoration(new DividerItemDecoration(IndexBarActivity.this, DividerItemDecoration.VERTICAL_LIST));
 
 
@@ -102,6 +102,6 @@ public class IndexBarActivity extends BaseActivity {
                         .invalidate();
                 mDecoration.setmDatas(mDatas);
             }
-        }, 2000);
+        }, 0);
     }
 }
