@@ -57,6 +57,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="标题栏颜色渐变"/>
+            <Button
+                android:id="@+id/but_indexBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="索引"/>
+            <Button
+                android:id="@+id/but_citypicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="城市选择"/>
         </LinearLayout>
 
     </ScrollView>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.liu.abing.ColorGradActivity;
+import com.liu.abing.IndexBarActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
 import com.liu.abing.roll.TextViewRollActivity;
@@ -14,6 +15,8 @@ import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.tools.Tools;
+
+import abing.liu.com.citypicker.CityPickerActivity;
 
 /**
  * 项目名称：abing
@@ -71,6 +74,18 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, ColorGradActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_indexBar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, IndexBarActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_citypicker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, CityPickerActivity.class);
             }
         });
     }

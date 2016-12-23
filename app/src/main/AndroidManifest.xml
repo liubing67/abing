@@ -33,6 +33,7 @@
         </activity>
         <activity android:name=".steps.step.fragment.TestHorizontalStepViewActivity"/>
         <activity android:name=".ColorGradActivity"/>
+        <activity android:name=".IndexBarActivity"/>
     </application>
 
 </manifest>
