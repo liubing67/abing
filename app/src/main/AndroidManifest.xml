@@ -34,6 +34,8 @@
         <activity android:name=".steps.step.fragment.TestHorizontalStepViewActivity"/>
         <activity android:name=".ColorGradActivity"/>
         <activity android:name=".IndexBarActivity"/>
+        <activity android:name=".chart.ChartActivity"/>
+        <activity android:name=".chart.PieChartActivity"/>
     </application>
 
 </manifest>
