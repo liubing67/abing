@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.liu.abing.ColorGradActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.chart.ChartActivity;
+import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
 import com.liu.abing.roll.TextViewRollActivity;
@@ -62,7 +63,7 @@ public class Fragment2 extends Fragment {
         view.findViewById(R.id.but_drag).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(getActivity(),null, DragLActivity.class);
+                Tools.startActivity(getActivity(),null, DragActivity.class);
             }
         });
         view.findViewById(R.id.but_shopcar).setOnClickListener(new View.OnClickListener() {

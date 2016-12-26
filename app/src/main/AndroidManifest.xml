@@ -36,6 +36,9 @@
         <activity android:name=".IndexBarActivity"/>
         <activity android:name=".chart.ChartActivity"/>
         <activity android:name=".chart.PieChartActivity"/>
+        <activity android:name=".drag.DragActivity"/>
+        <activity android:name=".drag.DragLOActivity"/>
+        <activity android:name=".drag.DragThreeActivity"/>
     </application>
 
 </manifest>

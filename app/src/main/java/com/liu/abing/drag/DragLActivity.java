@@ -35,7 +35,7 @@ public class DragLActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_drag);
+        setContentView(R.layout.activity_ldrag);
         initView();
     }
     private void initView()

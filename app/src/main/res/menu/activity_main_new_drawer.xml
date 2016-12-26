@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tngou_news"
+            android:checked="true"
+            android:icon="@drawable/ic_launcher"
+            android:title="123123"/>
+        <item
+            android:id="@+id/nav_tngou_girl"
+            android:icon="@drawable/ic_launcher"
+            android:title="123123"/>
+        <item
+            android:id="@+id/nav_my_blog"
+            android:icon="@drawable/ic_launcher"
+            android:title="123123"/>
+    </group>
+
+    <item android:title="更多">
+        <menu>
+            <item
+                android:id="@+id/nav_set"
+                android:icon="@drawable/ic_launcher"
+                android:title="设置"/>
+        </menu>
+    </item>
+
+</menu>

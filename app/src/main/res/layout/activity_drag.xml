@@ -1,53 +1,21 @@
-<com.tools.views.DragLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/dl"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
-
-    <LinearLayout
+    android:orientation="vertical">
+    <Button
+        android:id="@+id/but_drag1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingBottom="50dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="50dp"
-        android:paddingTop="50dp">
-
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/ic_launcher" />
-
-        <ListView
-            android:id="@+id/lv_left"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-    </LinearLayout>
-
-    <LinearLayout
+        android:layout_height="wrap_content"
+        android:text="侧滑特效"/>
+    <Button
+        android:id="@+id/but_drag2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#FFFFFF"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="#18B6EF">
-
-            <ImageView
-                android:id="@+id/iv_header"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="15dp"
-                android:src="@drawable/ic_launcher" />
-        </RelativeLayout>
-
-        <ListView
-            android:id="@+id/lv_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"></ListView>
-    </LinearLayout>
-
-</com.tools.views.DragLayout>
+        android:layout_height="wrap_content"
+        android:text="侧滑2"/>
+    <Button
+        android:id="@+id/but_drag3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="侧滑3"/>
+</LinearLayout>
