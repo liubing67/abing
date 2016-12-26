@@ -52,7 +52,7 @@ public class DragThreeActivity extends BaseActivity implements NavigationView.On
 //
         navView.setNavigationItemSelectedListener(this);
         setTitle(getString(R.string.located_failed));
-
+//        drawerLayout.openDrawer(GravityCompat.START);//
         //头部布局点击设置
         View drawview = navView.inflateHeaderView(R.layout.nav_header_main_new);
         ImageView head_iv = (ImageView) drawview.findViewById(R.id.imageView);
