@@ -10,7 +10,7 @@
         android:id="@+id/id_iv_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/info_text"
+        android:src="@mipmap/info_text"
         />
 
 
@@ -19,6 +19,6 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@id/id_iv_tip"
         android:layout_below="@id/id_iv_tip"
-        android:src="@drawable/jt_down"/>
+        android:src="@mipmap/jt_down"/>
 
 </RelativeLayout>

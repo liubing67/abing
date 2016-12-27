@@ -10,7 +10,7 @@
         android:id="@+id/id_iv_tip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/info_text"
+        android:src="@mipmap/info_text"
         />
 
 
@@ -25,7 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/id_iv_tip"
-        android:src="@drawable/jt_known"
+        android:src="@mipmap/jt_known"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:paddingRight="10dp"

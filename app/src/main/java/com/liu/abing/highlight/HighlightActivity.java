@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -34,7 +35,7 @@ import zhy.com.highlight.shape.RectLightShape;
  * 修改时间：2016/12/27 17:54
  * 修改备注：
  */
-public class HighlightActivity extends BaseActivity {
+public class HighlightActivity extends AppCompatActivity {
 
     private HighLight mHightLight;
     @Override
