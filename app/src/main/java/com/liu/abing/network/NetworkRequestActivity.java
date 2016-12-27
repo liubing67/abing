@@ -13,6 +13,7 @@ import com.tools.http.nohttp.HttpListener;
 import com.tools.http.okhttp.IRequestCallback;
 import com.tools.http.okhttp.IRequestManager;
 import com.tools.http.okhttp.RequestFactory;
+import com.tools.util.ToastUtil;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
@@ -72,7 +73,7 @@ public class NetworkRequestActivity extends BaseActivity {
         public void onSucceed(int what, Response<String> response) {
             // 拿到请求结果
             String result = response.get();
-            Logger.d("1111111111", "loginresult = " + result);
+            ToastUtil.customShow(NetworkRequestActivity.this,result);
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 int rtState = jsonObject.optInt("rtState");
@@ -85,6 +86,7 @@ public class NetworkRequestActivity extends BaseActivity {
         @Override
         public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
             Logger.d(TAG, exception.getMessage());
+            ToastUtil.customShow(NetworkRequestActivity.this,exception.getMessage());
         }
 
     };

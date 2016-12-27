@@ -17,6 +17,9 @@
     <style name="NoWhiteAppTheme" parent="AppTheme">
         <item name="android:windowIsTranslucent">true</item>
     </style>
+    <style name="HighLightTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
     <!-- 自定义loading dialog -->
     <style name="Loading_Dialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>

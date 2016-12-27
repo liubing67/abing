@@ -39,6 +39,9 @@
         <activity android:name=".drag.DragActivity"/>
         <activity android:name=".drag.DragLOActivity"/>
         <activity android:name=".drag.DragThreeActivity"/>
+        <activity android:name=".network.NetworkRequestActivity"/>
+        <activity android:name=".highlight.HighlightActivity"
+                    android:theme="@style/HighLightTheme"/>
     </application>
 
 </manifest>

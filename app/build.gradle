@@ -44,4 +44,5 @@ dependencies {
     compile project(':citypicker')
     compile files('libs/mpandroidchartlibrary-1-7-4.jar')
     //图表所需
+    compile project(path: ':highlight')
 }

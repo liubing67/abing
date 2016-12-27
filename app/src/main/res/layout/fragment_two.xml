@@ -77,6 +77,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="网络请求"/>
+            <Button
+                android:id="@+id/but_highlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="高亮显示"/>
         </LinearLayout>
 
     </ScrollView>

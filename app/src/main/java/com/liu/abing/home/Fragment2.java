@@ -12,6 +12,8 @@ import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
+import com.liu.abing.highlight.HighlightActivity;
+import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.roll.TextViewRollActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
@@ -99,7 +101,13 @@ public class Fragment2 extends Fragment {
         view.findViewById(R.id.but_networkRequest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(getActivity(),null, ChartActivity.class);
+                Tools.startActivity(getActivity(),null, NetworkRequestActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_highlight).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, HighlightActivity.class);
             }
         });
     }
