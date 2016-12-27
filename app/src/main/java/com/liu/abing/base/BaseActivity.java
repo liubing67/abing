@@ -3,8 +3,8 @@ package com.liu.abing.base;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import com.tools.http.CallServer;
-import com.tools.http.HttpListener;
+import com.tools.http.nohttp.CallServer;
+import com.tools.http.nohttp.HttpListener;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.RequestQueue;

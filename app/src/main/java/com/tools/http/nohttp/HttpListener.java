@@ -1,4 +1,4 @@
-package com.tools.http;
+package com.tools.http.nohttp;
 
 import com.yolanda.nohttp.rest.Response;
 

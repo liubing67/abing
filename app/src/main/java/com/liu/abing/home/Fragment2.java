@@ -96,5 +96,11 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null, ChartActivity.class);
             }
         });
+        view.findViewById(R.id.but_networkRequest).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, ChartActivity.class);
+            }
+        });
     }
 }

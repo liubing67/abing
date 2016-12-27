@@ -1,7 +1,7 @@
-package com.tools.http;
+package com.tools.http.nohttp;
 
 import android.app.Activity;
-import android.content.Context;
+
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.download.DownloadQueue;
 import com.yolanda.nohttp.rest.Request;

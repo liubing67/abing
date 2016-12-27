@@ -72,6 +72,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="图表"/>
+            <Button
+                android:id="@+id/but_networkRequest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="网络请求"/>
         </LinearLayout>
 
     </ScrollView>

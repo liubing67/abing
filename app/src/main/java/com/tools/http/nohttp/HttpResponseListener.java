@@ -1,4 +1,4 @@
-package com.tools.http;
+package com.tools.http.nohttp;
 
 import android.app.Activity;
 import android.content.Context;
@@ -7,6 +7,7 @@ import android.support.v7.app.AlertDialog;
 import android.util.Log;
 
 import com.liu.abing.R;
+import com.tools.http.nohttp.HttpListener;
 import com.tools.util.ToastUtil;
 import com.tools.views.dialog.LoadingDialogView;
 import com.tools.views.dialog.WebDialog;
