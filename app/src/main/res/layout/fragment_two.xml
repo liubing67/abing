@@ -87,6 +87,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="PopupWindow"/>
+            <Button
+                android:id="@+id/but_blur"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="高斯模糊"/>
+            <Button
+                android:id="@+id/but_zoomin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="下拉图片放大"/>
         </LinearLayout>
 
     </ScrollView>

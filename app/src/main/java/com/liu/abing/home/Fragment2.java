@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.liu.abing.ColorGradActivity;
+import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
+import com.liu.abing.ZoominActivity;
 import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
@@ -115,6 +117,18 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, HintPopWActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_blur).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, FastBlurActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_zoomin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, ZoominActivity.class);
             }
         });
     }

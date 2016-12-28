@@ -42,6 +42,8 @@
         <activity android:name=".network.NetworkRequestActivity"/>
         <activity android:name=".highlight.HighlightActivity"/>
         <activity android:name=".HintPopWActivity"/>
+        <activity android:name=".FastBlurActivity"/>
+        <activity android:name=".ZoominActivity"/>
     </application>
 
 </manifest>

@@ -73,8 +73,17 @@ public class LViewPager extends RelativeLayout {
         }
 
     }
-    //点击监听
+    public void setHeight(int height) {
+        ViewGroup.LayoutParams lp = viewPager.getLayoutParams();
+        lp.height = height;
+        viewPager.setLayoutParams(lp);
+    }
+    public ViewPager getViewPager() {
+        return viewPager;
+    }
 
+
+    //点击监听
     public void setOnItemClickListener(onItemClickListener onitem) {
         onitemclicklistener = onitem;
     }
@@ -130,7 +139,7 @@ public class LViewPager extends RelativeLayout {
         addPicView();
         setPoint();
         myPageAdapter.notifyDataSetChanged();
-        handler.sendEmptyMessageDelayed(VP_NEXT, VP_NEXT_TIME);
+        handler.sendEmptyMessageDelayed(VP_NEXT, VP_NEXT_TIME);//注释掉就不自动滚动了
         for (int i = 0; i < listimageUrl.size(); i++) {
             ImageView iv = (ImageView) picList.get(i).findViewById(R.id.iv_iamgeview);
 //            //判断点击页面是否存在，如果不存在则不对Imageview做监听
@@ -148,7 +157,11 @@ public class LViewPager extends RelativeLayout {
         iv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onitemclicklistener.onItemClick(str);
+                if (onitemclicklistener!=null)
+                {
+                    onitemclicklistener.onItemClick(str);
+                }
+
             }
         });
 
