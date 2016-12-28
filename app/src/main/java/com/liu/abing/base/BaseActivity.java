@@ -30,7 +30,9 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         BaseApplication.getInstance().addActivity(this);
         TAG = this.getClass().getSimpleName();
+        BaseApplication.getInstance().addFinishActivity(TAG,BaseActivity.this);
         requestQueue = NoHttp.newRequestQueue();
+
     }
 
 

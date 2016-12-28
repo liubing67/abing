@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
+import com.liu.abing.base.BaseApplication;
 import com.tools.util.DensityUtil;
 
 /**

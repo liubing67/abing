@@ -74,7 +74,7 @@ public class BaseApplication extends Application {
         System.gc();
     }
 
-    private static Map<String, Activity> destoryMap = new HashMap<>();
+    public Map<String, Activity> destoryMap = new HashMap<>();
 
     /**
      * 添加到销毁队列
@@ -82,17 +82,17 @@ public class BaseApplication extends Application {
      * @param activity 要销毁的activity
      */
 
-    public static void addDestoryActivity(String activityName, Activity activity) {
+    public void addFinishActivity(String activityName, Activity activity) {
         destoryMap.put(activityName, activity);
     }
 
     /**
-     * 销毁指定Activity
+     * 销毁指定Activity  BaseApplication.getInstance().finishActivity("ChartActivity");
      */
-    public static void destoryActivity(String activityName) {
+    public void finishActivity(String activityName) {
         Set<String> keySet = destoryMap.keySet();
         for (String key : keySet) {
-            destoryMap.get(key).finish();
+            destoryMap.get(activityName).finish();
         }
     }
 }

@@ -10,6 +10,7 @@ import android.widget.TextView;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
+import com.liu.abing.base.BaseApplication;
 import com.tools.util.pictures.HelperMethod;
 
 import java.util.ArrayList;
@@ -112,5 +113,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         //显示界面
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.layout, fragment).commit();
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        BaseApplication.getInstance().exit();
     }
 }
