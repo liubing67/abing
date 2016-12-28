@@ -40,8 +40,8 @@
         <activity android:name=".drag.DragLOActivity"/>
         <activity android:name=".drag.DragThreeActivity"/>
         <activity android:name=".network.NetworkRequestActivity"/>
-        <activity android:name=".highlight.HighlightActivity"
-                    android:theme="@style/HighLightTheme"/>
+        <activity android:name=".highlight.HighlightActivity"/>
+        <activity android:name=".HintPopWActivity"/>
     </application>
 
 </manifest>

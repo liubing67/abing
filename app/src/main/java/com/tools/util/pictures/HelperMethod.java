@@ -136,45 +136,4 @@ public class HelperMethod {
         }
         System.gc();
     }
-//
-//    //登录检测
-//    public static boolean checkLogin(Activity context, int classCode) {
-//        if (HelperShared.getIsLogin(context)) {
-//            if (classCode != Common.SEND_NOTICE) {
-//                Intent intent = new Intent(context, getHashMapClass().get(classCode));
-//                int page = 0;
-//                if (classCode == Common.OPEN_CLEAN) {
-//                    page = 1;
-//                } else if (classCode == Common.OPEN_REPAIR) {
-//                    page = 2;
-//                }
-//                if (page != 0) {
-//                    Bundle bundle = new Bundle();
-//                    bundle.putInt("page", page);
-//                    intent.putExtras(bundle);
-//                }
-//                context.startActivityForResult(intent, classCode);
-//            }
-//            return true;
-//        } else {
-//            Intent intent = new Intent(context, LoginActivity.class);
-//            Bundle bundle = new Bundle();
-//            bundle.putInt("code", classCode);
-//            intent.putExtras(bundle);
-//            context.startActivityForResult(intent, Common.REQUEST_LOGIN);
-//            return false;
-//        }
-//    }
-
-//    public static HashMap<Integer, Class<?>> getHashMapClass() {
-//        HashMap<Integer, Class<?>> map = new HashMap<Integer, Class<?>>();
-//        map.put(Common.OPEN_PERSON_CENTER, PersonalCenterActivity.class);
-//        map.put(Common.OPEN_CHECK_IN, CheckInActivity.class);
-//        map.put(Common.OPEN_CHECK_OUT, CheckOutActivity.class);
-//        map.put(Common.OPEN_RESTAURANT, RestaurantActivity.class);
-//        map.put(Common.OPEN_SHOP, ShopActivity.class);
-//        map.put(Common.OPEN_CLEAN, ServiceActivity.class);
-//        map.put(Common.OPEN_REPAIR, ServiceActivity.class);
-//        return map;
-//    }
 }

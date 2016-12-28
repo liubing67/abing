@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.liu.abing.ColorGradActivity;
+import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.drag.DragActivity;
@@ -108,6 +109,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, HighlightActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_popw).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, HintPopWActivity.class);
             }
         });
     }
