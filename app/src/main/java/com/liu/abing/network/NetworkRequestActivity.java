@@ -94,7 +94,7 @@ public class NetworkRequestActivity extends BaseActivity {
     private void okHttpRequest()
     {
         IRequestManager iRequestManager=RequestFactory.getRequestManager();
-        iRequestManager.post(Urls.LOGIN, "", new IRequestCallback() {
+        iRequestManager.post(Urls.LOGIN, "liubing", new IRequestCallback() {
             @Override
             public void onSuccess(String response) {
                 Logger.d(response);

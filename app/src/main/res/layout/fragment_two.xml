@@ -97,6 +97,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="下拉图片放大"/>
+            <Button
+                android:id="@+id/but_Refresh"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="刷新"/>
         </LinearLayout>
 
     </ScrollView>

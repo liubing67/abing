@@ -44,6 +44,8 @@
         <activity android:name=".HintPopWActivity"/>
         <activity android:name=".FastBlurActivity"/>
         <activity android:name=".ZoominActivity"/>
+        <activity android:name=".refresh.RefreshActivity"/>
+        <activity android:name=".refresh.SwipeRefreshLayoutActivity"/>
     </application>
 
 </manifest>

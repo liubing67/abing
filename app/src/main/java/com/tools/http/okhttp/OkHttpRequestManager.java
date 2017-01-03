@@ -2,6 +2,8 @@ package com.tools.http.okhttp;
 
 import android.os.Handler;
 
+import com.orhanobut.logger.Logger;
+
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
@@ -55,6 +57,8 @@ public class OkHttpRequestManager implements IRequestManager {
     @Override
     public void post(String url, String requestBodyJson, IRequestCallback requestCallback) {
         RequestBody body = RequestBody.create(TYPE_JSON, requestBodyJson);
+
+        Logger.d(body.toString());
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)

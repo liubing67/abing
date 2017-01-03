@@ -15,5 +15,3 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--dontwarn com.yolanda.nohttp.**
--keep class com.yolanda.nohttp.**{*;}
