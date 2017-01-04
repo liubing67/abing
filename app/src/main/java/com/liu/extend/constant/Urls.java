@@ -21,5 +21,5 @@ public class Urls {
     /**
      * //版本检测更新
      */
-    public static final String UPDATE_INFO ="http://www.china-madpay.com/miaofuversion.xml";
+    public static final String UPDATE_INFO ="http://www.china-madpay.com/appversion.xml";
 }

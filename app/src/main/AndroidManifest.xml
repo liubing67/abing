@@ -46,6 +46,8 @@
         <activity android:name=".ZoominActivity"/>
         <activity android:name=".refresh.RefreshActivity"/>
         <activity android:name=".refresh.SwipeRefreshLayoutActivity"/>
+        <activity android:name=".refresh.OnlyListViewActivity"/>
+        <activity android:name=".VersionActivity"/>
     </application>
 
 </manifest>

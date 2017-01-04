@@ -10,6 +10,7 @@ import com.liu.abing.ColorGradActivity;
 import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
+import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.drag.DragActivity;
@@ -136,6 +137,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, RefreshActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_version).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, VersionActivity.class);
             }
         });
     }

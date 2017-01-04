@@ -102,6 +102,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="刷新"/>
+            <Button
+                android:id="@+id/but_version"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="版本更新"/>
         </LinearLayout>
 
     </ScrollView>

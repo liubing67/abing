@@ -33,7 +33,12 @@ public class RefreshActivity extends BaseActivity {
                 Tools.startActivity(RefreshActivity.this,null,SwipeRefreshLayoutActivity.class);
             }
         });
-
+        findViewById(R.id.but_onlylistview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(RefreshActivity.this,null,OnlyListViewActivity.class);
+            }
+        });
 
     }
 }
