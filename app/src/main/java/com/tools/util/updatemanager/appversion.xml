@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shby>
+	<update>
+		<wp7></wp7>
+		<ios>
+			<promptMsg>false</promptMsg>
+			<forceUpdate>false</forceUpdate>
+			<versionCode>21</versionCode>			
+			<versionName>2.2</versionName>
+			<updateLog><![CDATA[1.解决ios10.0 版本不能收款；2.新增商户资料修改功能；3.优化订单查询页面；4.消息中心全新改版；5.自定义我的头像和昵称；6.我的商户页面全新改版；7.修复已知bug；
+		]]></updateLog>
+		</ios>
+		<android>
+			<versionCode>23</versionCode>
+			<versionName>V2.2.2</versionName>
+			<downloadUrl>http://www.china-madpay.com/shangfubao.apk</downloadUrl>
+			<updateLog><![CDATA[1.提款页面整体改版；2.修改部分bug；3.修正部分机型适配问题]]></updateLog>
+			<coverUpdate>false</coverUpdate>
+			<forceUpdate>1</forceUpdate>
+			<coverStartDate>2015-12-14</coverStartDate>
+			<coverEndDate>2016-10-26</coverEndDate>
+			<coverURL></coverURL>
+		</android>
+	</update>
+</shby>
