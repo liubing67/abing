@@ -74,4 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:background="#88dddddd"/>
+    <TextView
+        android:id="@+id/text_money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 </LinearLayout>

@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
 import com.liu.abing.home.MainActivity;
+import com.tools.Tools;
 import com.tools.views.MarqueeText;
 import com.tools.views.roll.ComplexViewMF;
 import com.tools.views.roll.MarqueeFactory;
@@ -104,5 +105,7 @@ public class TextViewRollActivity extends BaseActivity {
         marqueeView5.setAnimInAndOut(R.anim.bottom_in, R.anim.top_out);
         marqueeView5.setMarqueeFactory(marqueeFactory5);
         marqueeView5.startFlipping();
+
+        Tools.autoIncrement((TextView) findViewById(R.id.text_money),1,90,3000);//文字自动增加
     }
 }

@@ -1,5 +1,7 @@
 package com.tools;
 
+import android.animation.FloatEvaluator;
+import android.animation.ValueAnimator;
 import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
@@ -15,6 +17,7 @@ import android.telephony.TelephonyManager;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -23,6 +26,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -393,5 +397,28 @@ public class Tools {
         DisplayMetrics dm = new DisplayMetrics();
         activity.getWindowManager().getDefaultDisplay().getMetrics(dm);
         return dm.widthPixels;
+    }
+
+    // 实现金额文本自动增加
+    public static void autoIncrement(final TextView target, final float start,
+                                     final float end, long duration) {
+
+        ValueAnimator animator = ValueAnimator.ofFloat(start, end);
+
+        animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+            private FloatEvaluator evalutor = new FloatEvaluator();
+            private DecimalFormat format = new DecimalFormat("####0.0#");
+
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+
+                float fraction = animation.getAnimatedFraction();
+                float currentValue = evalutor.evaluate(fraction, start, end);
+                target.setText(format.format(currentValue));
+            }
+        });
+        animator.setDuration(duration);
+        animator.start();
+
     }
 }
