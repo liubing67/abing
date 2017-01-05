@@ -1,10 +1,14 @@
 package com.liu.abing;
 
+import android.annotation.TargetApi;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.BaseAdapter;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -13,7 +17,9 @@ import android.widget.TextView;
 import com.liu.abing.base.BaseActivity;
 import com.tools.util.ColorUtil;
 import com.tools.util.StatusBarUtil;
+import com.tools.util.SystemUtils;
 import com.tools.views.ListViewForScrollView;
+import com.tools.util.SystemBarTintManager ;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -65,7 +71,32 @@ public class ColorGradActivity extends BaseActivity {
             }
         });
 
+
+        //     或者用这个方法
+//        View mycenter_bar = findViewById(R.id.mycenter_bar);
+//        //只对api19以上版本有效
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            setTranslucentStatus(true);
+//            mycenter_bar.setVisibility(View.VISIBLE);
+//            mycenter_bar.getLayoutParams().height = SystemUtils.getStatusHeight(this);
+//            mycenter_bar.setLayoutParams(mycenter_bar.getLayoutParams());
+//        } else {
+//            mycenter_bar.setVisibility(View.GONE);
+//        }
     }
+
+//    @TargetApi(19)
+//    private void setTranslucentStatus(boolean on) {
+//        Window win =getWindow();
+//        WindowManager.LayoutParams winParams = win.getAttributes();
+//        final int bits = WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS;
+//        if (on) {
+//            winParams.flags |= bits;
+//        } else {
+//            winParams.flags &= ~bits;
+//        }
+//        win.setAttributes(winParams);
+//    }
 
     // 处理标题栏颜色渐变
     private void handleTitleBarColorEvaluate() {
@@ -82,6 +113,10 @@ public class ColorGradActivity extends BaseActivity {
 
             rl_bar.setBackgroundColor(ColorUtil.getNewColorByStartEndColor(ColorGradActivity.this, fraction, R.color.transparent, R.color.red));
             Log.e("222222222","222222222"+fraction);
+        }
+        if (marginTop>300)
+        {
+            rl_bar.setBackgroundColor(getResources().getColor(R.color.red));
         }
     }
 

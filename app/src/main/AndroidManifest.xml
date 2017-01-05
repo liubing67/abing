@@ -5,14 +5,14 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:name=".base.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        >
+        android:theme="@style/AppTheme">
         <activity android:name=".home.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,34 +20,39 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsDetailActivity"/>
-        <activity android:name=".slide.SlideActivity"/>
-        <activity android:name=".slide.recyclerviewslide.RecyclerViewSlideActivity"/>
-        <activity android:name=".roll.TextViewRollActivity"/>
-        <activity android:name=".steps.StepsHActivity"/>
-        <activity android:name=".drag.DragLActivity"/>
-        <activity android:name=".shopcar.ShopCarActivity"/>
-        <activity android:name=".steps.step.fragment.StepActivity"
+        <activity android:name=".NewsDetailActivity" />
+        <activity android:name=".slide.SlideActivity" />
+        <activity android:name=".slide.recyclerviewslide.RecyclerViewSlideActivity" />
+        <activity android:name=".roll.TextViewRollActivity" />
+        <activity android:name=".steps.StepsHActivity" />
+        <activity android:name=".drag.DragLActivity" />
+        <activity android:name=".shopcar.ShopCarActivity" />
+        <activity
+            android:name=".steps.step.fragment.StepActivity"
             android:theme="@style/StepTheme">
 
         </activity>
-        <activity android:name=".steps.step.fragment.TestHorizontalStepViewActivity"/>
-        <activity android:name=".ColorGradActivity"/>
-        <activity android:name=".IndexBarActivity"/>
-        <activity android:name=".chart.ChartActivity"/>
-        <activity android:name=".chart.PieChartActivity"/>
-        <activity android:name=".drag.DragActivity"/>
-        <activity android:name=".drag.DragLOActivity"/>
-        <activity android:name=".drag.DragThreeActivity"/>
-        <activity android:name=".network.NetworkRequestActivity"/>
-        <activity android:name=".highlight.HighlightActivity"/>
-        <activity android:name=".HintPopWActivity"/>
-        <activity android:name=".FastBlurActivity"/>
-        <activity android:name=".ZoominActivity"/>
-        <activity android:name=".refresh.RefreshActivity"/>
-        <activity android:name=".refresh.SwipeRefreshLayoutActivity"/>
-        <activity android:name=".refresh.OnlyListViewActivity"/>
-        <activity android:name=".VersionActivity"/>
+        <activity android:name=".steps.step.fragment.TestHorizontalStepViewActivity" />
+        <activity android:name=".ColorGradActivity" />
+        <activity android:name=".IndexBarActivity" />
+        <activity android:name=".chart.ChartActivity" />
+        <activity android:name=".chart.PieChartActivity" />
+        <activity android:name=".drag.DragActivity" />
+        <activity android:name=".drag.DragLOActivity" />
+        <activity android:name=".drag.DragThreeActivity" />
+        <activity android:name=".network.NetworkRequestActivity" />
+        <activity android:name=".highlight.HighlightActivity" />
+        <activity android:name=".HintPopWActivity" />
+        <activity android:name=".FastBlurActivity" />
+        <activity android:name=".ZoominActivity" />
+        <activity android:name=".refresh.RefreshActivity" />
+        <activity android:name=".refresh.SwipeRefreshLayoutActivity" />
+        <activity android:name=".refresh.OnlyListViewActivity" />
+        <activity
+            android:name=".VersionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>
