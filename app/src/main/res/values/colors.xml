@@ -291,6 +291,11 @@
     <!--标题背景色 -->
     <color name="blue">#0000FF</color>
     <!--蓝色 -->
+
+    <color name="color_f2f2f2">#F2F2F2</color>
+
+
+
     <color name="cutline">#e1e1e7</color>
     <color name="themecolor">#29b6f6</color>
     <color name="textcolor">#333333</color>
@@ -306,4 +311,8 @@
     <color name="transparent">#00000000</color>
     <color name="partTranslucent">#39000000</color>
     <color name="black">#000000</color>
+    <color name="mask_color">#88888888</color>
+    <color name="un_press_color">#9C27B0</color>
+    <color name="drop_down_selected">#7B1FA2</color>
+    <color name="drop_down_unselected">#111111</color>
 </resources>

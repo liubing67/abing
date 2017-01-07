@@ -107,6 +107,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="版本更新"/>
+            <Button
+                android:id="@+id/but_dropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="顶部弹出菜单"/>
         </LinearLayout>
 
     </ScrollView>

@@ -2,6 +2,7 @@ package com.liu.abing.home;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.MenuPopupWindow;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +17,7 @@ import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
+import com.liu.abing.dropdownmenu.DropDownMenuActivity;
 import com.liu.abing.highlight.HighlightActivity;
 import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.refresh.RefreshActivity;
@@ -143,6 +145,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, VersionActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_dropdownMenu).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,DropDownMenuActivity.class);
             }
         });
     }

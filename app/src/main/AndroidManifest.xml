@@ -53,6 +53,7 @@
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".dropdownmenu.DropDownMenuActivity"/>
     </application>
 
 </manifest>
