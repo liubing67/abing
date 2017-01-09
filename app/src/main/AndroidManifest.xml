@@ -54,6 +54,7 @@
             android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".dropdownmenu.DropDownMenuActivity"/>
+        <activity android:name=".EasyFlipActivity"/>
     </application>
 
 </manifest>

@@ -315,4 +315,16 @@
     <color name="un_press_color">#9C27B0</color>
     <color name="drop_down_selected">#7B1FA2</color>
     <color name="drop_down_unselected">#111111</color>
+
+    <color name="gray_trans">#88e5e6e7</color>
+
+    <color name="colorSecondary">#e5e6e7</color>
+    <color name="colorGrayText">#9e9d9d</color>
+    <color name="colorGrayTextDark">#636363</color>
+    <color name="windowBackgroundColor">#e5e6e7</color>
+
+    <color name="colorPink">#eb1460</color>
+    <color name="colorRed">#b52913</color>
+    <color name="colorGreen">#009687</color>
+    <color name="colorOrange">#ff5505</color>
 </resources>

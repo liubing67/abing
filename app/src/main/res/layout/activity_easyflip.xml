@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/windowBackgroundColor"
+    android:orientation="vertical"
+   >
+
+    <com.tools.views.EasyFlipView
+        android:id="@+id/easyFlipView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:flipOnTouch="true"
+        app:flipDuration="500"
+        app:flipEnabled="true">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:src="@drawable/card_back"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:gravity="center"
+            android:src="@drawable/card_front"
+            />
+
+    </com.tools.views.EasyFlipView>
+
+    <com.tools.views.EasyFlipView
+        android:id="@+id/easyFlipView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:flipOnTouch="true"
+        app:flipDuration="500"
+        app:flipEnabled="true">
+
+        <include layout="@layout/flash_card_layout_back"/>
+
+        <include layout="@layout/flash_card_layout_front" />
+
+    </com.tools.views.EasyFlipView>
+
+
+
+</LinearLayout>

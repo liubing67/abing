@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.liu.abing.ColorGradActivity;
+import com.liu.abing.EasyFlipActivity;
 import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
@@ -151,6 +152,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null,DropDownMenuActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_easyflip).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,EasyFlipActivity.class);
             }
         });
     }

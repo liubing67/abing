@@ -13,4 +13,10 @@
         <attr name="marqueeAnimIn" format="reference" />
         <attr name="marqueeAnimOut" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="easy_flip_view">
+        <attr name="flipOnTouch" format="boolean"/>
+        <attr name="flipDuration" format="integer"/>
+        <attr name="flipEnabled" format="boolean"/>
+    </declare-styleable>
 </resources>
