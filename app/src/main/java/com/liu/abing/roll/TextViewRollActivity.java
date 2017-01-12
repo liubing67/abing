@@ -106,6 +106,6 @@ public class TextViewRollActivity extends BaseActivity {
         marqueeView5.setMarqueeFactory(marqueeFactory5);
         marqueeView5.startFlipping();
 
-        Tools.autoIncrement((TextView) findViewById(R.id.text_money),1,90,3000);//文字自动增加
+        Tools.autoIncrement((TextView) findViewById(R.id.text_money),1,900,1000);//文字自动增加
     }
 }
