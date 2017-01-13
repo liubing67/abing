@@ -412,7 +412,7 @@ public class UpdateManager {
                         update = new Update();
                     } else if (update != null) {
                         if (tag.equalsIgnoreCase("versionCode")) {
-                            update.setVersionCode(Integer.parseInt(parser.nextText(), 0));
+                            update.setVersionCode(Integer.parseInt(parser.nextText()));
                         } else if (tag.equalsIgnoreCase("versionName")) {
                             update.setVersionName(parser.nextText());
                         } else if (tag.equalsIgnoreCase("downloadUrl")) {
