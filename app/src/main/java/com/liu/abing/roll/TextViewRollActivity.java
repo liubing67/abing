@@ -2,9 +2,11 @@ package com.liu.abing.roll;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.ViewFlipper;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
@@ -106,6 +108,15 @@ public class TextViewRollActivity extends BaseActivity {
         marqueeView5.setMarqueeFactory(marqueeFactory5);
         marqueeView5.startFlipping();
 
+        ///////////////
         Tools.autoIncrement((TextView) findViewById(R.id.text_money),1,900,1000);//文字自动增加
+
+
+//////////////////////////
+        ViewFlipper vf = (ViewFlipper) findViewById(R.id.vf);
+
+        vf.addView(View.inflate(this, R.layout.view_advertisement01, null));
+        vf.addView(View.inflate(this, R.layout.view_advertisement02, null));
+        vf.addView(View.inflate(this, R.layout.view_advertisement03, null));
     }
 }
