@@ -93,8 +93,8 @@ public class EasyFlipView extends FrameLayout {
     }
 
     private void loadAnimations() {
-        mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this.context, R.anim.animation_flip_in);
-        mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this.context, R.anim.animation_flip_out);
+        mSetRightOut = (AnimatorSet) AnimatorInflater.loadAnimator(this.context, R.animator.animation_flip_in);
+        mSetLeftIn = (AnimatorSet) AnimatorInflater.loadAnimator(this.context, R.animator.animation_flip_out);
 
         setFlipDuration(flipDuration);
     }
