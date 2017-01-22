@@ -1,17 +1,9 @@
 apply plugin: 'com.android.library'
-
-
-apply plugin: 'com.github.dcendents.android-maven'
-apply plugin: 'com.jfrog.bintray'
-version = "1.0.0"       //这个是版本号，必须填写
+apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.1"
-
-
-    resourcePrefix "less_"     //这里随便填
-
 
     defaultConfig {
         minSdkVersion 15
@@ -25,6 +17,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -40,75 +33,19 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/AMap_Location_v2.3.0_20160112.jar')
+    compile 'com.android.support:multidex:1.0.1'
 }
 
-
-def siteUrl = 'https://github.com/zyj1609wz'      // 项目的主页   这个是说明，可随便填
-def gitUrl = 'https://github.com/zyj1609wz'      // Git仓库的url  这个是说明，可随便填
-group = "abing.liu.com.citypicker"    // 这里是groupId ,必须填写  一般填你唯一的包名
-
-install {
-    repositories.mavenInstaller {
-        // This generates POM.xml with proper parameters
-        pom {
-            project {
-                packaging 'aar'
-                // Add your description here
-                name 'Android BounceProgressBar Widget'     //项目描述
-                url siteUrl
-                // Set your license
-                licenses {
-                    license {
-                        name 'The Apache Software License, Version 2.0'
-                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
-                    }
-                }
-                developers {
-                    developer {
-                        id 'liub'        //填写开发者的一些基本信息
-                        name 'liub'    //填写开发者的一些基本信息
-                        email '724266839@qq.com'   //填写开发者的一些基本信息
-                    }
-                }
-                scm {
-                    connection gitUrl
-                    developerConnection gitUrl
-                    url siteUrl
-                }
-            }
-        }
-    }
+//添加
+publish {
+    userOrg = 'liubing67'//bintray.com用户名
+    groupId = 'com.liubing'//jcenter上的路径
+    artifactId = 'basetools'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+    website = 'https://github.com/liubing67/'//网站，不重要
 }
-
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    classifier = 'sources'
-}
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    classifier = 'javadoc'
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-bintray {
-    user = properties.getProperty("bintray.user")    //读取 local.properties 文件里面的 bintray.user
-    key = properties.getProperty("bintray.apikey")   //读取 local.properties 文件里面的 bintray.apikey
-    configurations = ['archives']
-    pkg {
-        repo = "maven"
-        name = "citypicker"    //发布到JCenter上的项目名字，必须填写
-        websiteUrl = siteUrl
-        vcsUrl = gitUrl
-        licenses = ["Apache-2.0"]
-        publish = true
-    }
-}
+//
+//按照上面编写即可，细节有标识注释了，假设按照上述的编写，最终引入的方式为：
+//
+//compile 'com.hyman:basetools:1.0.0

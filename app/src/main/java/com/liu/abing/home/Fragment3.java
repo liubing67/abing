@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import com.liu.abing.R;
 
+import me.iwf.photopicker.PhotoPicker;
+
 /**
  * 项目名称：abing
  * 类描述：
@@ -24,6 +26,7 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view =inflater.inflate(R.layout.fragment_three, container, false);
+
         return view;
     }
 }
