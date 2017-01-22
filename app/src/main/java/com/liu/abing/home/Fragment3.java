@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import com.liu.abing.R;
 
-import me.iwf.photopicker.PhotoPicker;
 
 /**
  * 项目名称：abing
