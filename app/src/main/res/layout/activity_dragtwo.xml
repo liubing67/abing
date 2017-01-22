@@ -32,7 +32,7 @@
             android:id="@+id/layout"
             android:layout_width="match_parent"
             android:layout_height="45dip"
-            android:background="@color/gray_deep"
+            android:background="@color/gray_trans"
             android:orientation="horizontal">
 
             <TextView

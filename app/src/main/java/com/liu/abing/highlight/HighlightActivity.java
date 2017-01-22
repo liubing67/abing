@@ -14,17 +14,16 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.liu.abing.R;
-import com.liu.abing.base.BaseActivity;
 
-import zhy.com.highlight.HighLight;
-import zhy.com.highlight.interfaces.HighLightInterface;
-import zhy.com.highlight.position.OnBottomPosCallback;
-import zhy.com.highlight.position.OnLeftPosCallback;
-import zhy.com.highlight.position.OnRightPosCallback;
-import zhy.com.highlight.position.OnTopPosCallback;
-import zhy.com.highlight.shape.BaseLightShape;
-import zhy.com.highlight.shape.CircleLightShape;
-import zhy.com.highlight.shape.RectLightShape;
+import uploadtest.abing.com.highlights.HighLight;
+import uploadtest.abing.com.highlights.interfaces.HighLightInterface;
+import uploadtest.abing.com.highlights.position.OnBottomPosCallback;
+import uploadtest.abing.com.highlights.position.OnLeftPosCallback;
+import uploadtest.abing.com.highlights.position.OnRightPosCallback;
+import uploadtest.abing.com.highlights.position.OnTopPosCallback;
+import uploadtest.abing.com.highlights.shape.BaseLightShape;
+import uploadtest.abing.com.highlights.shape.CircleLightShape;
+import uploadtest.abing.com.highlights.shape.RectLightShape;
 
 /**
  * 项目名称：abing

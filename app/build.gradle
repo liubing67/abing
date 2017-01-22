@@ -54,11 +54,6 @@ dependencies {
     compile project(':citypicker')
     compile files('libs/mpandroidchartlibrary-1-7-4.jar')
     //图表所需
-    compile project(path: ':highlight')
-    compile 'com.android.support:multidex:1.0.1'
-    // 多dex配置
-    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
-    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.1
-
     compile 'com.github.liubing67:PhotosPicker:latest.release'
+    compile project(path: ':highlights')
 }

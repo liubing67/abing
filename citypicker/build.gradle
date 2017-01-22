@@ -1,23 +1,18 @@
 apply plugin: 'com.android.library'
-apply plugin: 'com.novoda.bintray-release'//添加
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.1"
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
 
     defaultConfig {
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
             minifyEnabled false
-            multiDexEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -30,21 +25,20 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support:appcompat-v7:25.1.0'
+    compile 'com.android.support:appcompat-v7:24.1.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/AMap_Location_v2.3.0_20160112.jar')
-    compile 'com.android.support:multidex:1.0.1'
 }
 
-//添加
-publish {
-    userOrg = 'liubing67'//bintray.com用户名
-    groupId = 'com.liubing'//jcenter上的路径
-    artifactId = 'basetools'//项目名称
-    publishVersion = '1.0.0'//版本号
-    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
-    website = 'https://github.com/liubing67/'//网站，不重要
-}
+////添加
+//publish {
+//    userOrg = 'liubing67'//bintray.com用户名
+//    groupId = 'com.liubing'//jcenter上的路径
+//    artifactId = 'basetools'//项目名称
+//    publishVersion = '1.0.0'//版本号
+//    desc = 'Oh hi, this is a nice description for a project, right?'//描述，不重要
+//    website = 'https://github.com/liubing67/'//网站，不重要
+//}
 //
 //按照上面编写即可，细节有标识注释了，假设按照上述的编写，最终引入的方式为：
 //
