@@ -1,11 +1,12 @@
 package com.liu.abing.network;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
+import com.liu.abing.home.MainActivity;
 import com.liu.extend.constant.Urls;
 import com.orhanobut.logger.Logger;
 import com.tools.Tools;
@@ -14,7 +15,9 @@ import com.tools.http.okhttp.IRequestCallback;
 import com.tools.http.okhttp.IRequestManager;
 import com.tools.http.okhttp.RequestFactory;
 import com.tools.util.ToastUtil;
+import com.yolanda.nohttp.Headers;
 import com.yolanda.nohttp.NoHttp;
+import com.yolanda.nohttp.RedirectHandler;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
@@ -58,11 +61,11 @@ public class NetworkRequestActivity extends BaseActivity {
 
     private void noHttpRequest()
     {
-        Request request = NoHttp.createStringRequest(Urls.LOGIN, RequestMethod.POST);
+        Request request = NoHttp.createStringRequest(Urls.GET_HOME, RequestMethod.POST);
         request.setConnectTimeout(30000);
-        request.add("username", "13225337945");
-        request.add("password", "l123456789");
-        request.add("sign", Tools.getMD5("13515859857"+"2042386"));
+//        request.add("username", "13225337945");
+//        request.add("password", "l123456789");
+//        request.add("sign", Tools.getMD5("13515859857"+"2042386"));
         request(1, request, httpListener, true, true);
     }
     /**
@@ -73,6 +76,7 @@ public class NetworkRequestActivity extends BaseActivity {
         public void onSucceed(int what, Response<String> response) {
             // 拿到请求结果
             String result = response.get();
+            Logger.json(result);
             ToastUtil.customShow(NetworkRequestActivity.this,result);
             try {
                 JSONObject jsonObject = new JSONObject(result);
@@ -84,10 +88,20 @@ public class NetworkRequestActivity extends BaseActivity {
         }
 
         @Override
-        public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
-            Logger.d(TAG, exception.getMessage());
-            ToastUtil.customShow(NetworkRequestActivity.this,exception.getMessage());
+        public void onFailed(int what, Response<String> response) {
+            Exception exception = response.getException();
+
+
+            if (exception.getMessage().equals("The url is malformed: /crmapi/login."))
+            {
+                Logger.d("11111111111111111"+exception.getMessage());
+                Intent intent=new Intent(NetworkRequestActivity.this, MainActivity.class);
+                startActivity(intent);
+
+            }
         }
+
+
 
     };
 

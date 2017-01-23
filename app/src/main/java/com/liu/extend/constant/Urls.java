@@ -22,4 +22,8 @@ public class Urls {
      * //版本检测更新
      */
     public static final String UPDATE_INFO ="http://www.china-madpay.com/appversion.xml";
+
+
+
+    public static final String GET_HOME="http://218.80.1.67:8580/crmapi/core/funcs/main/getHomePageData";
 }

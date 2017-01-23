@@ -1,3 +1,18 @@
+/*
+ * Copyright 2015 Yan Zhenjie
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.tools.http.nohttp;
 
 import android.app.Activity;
@@ -8,13 +23,9 @@ import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.RequestQueue;
 
 /**
- * 项目名称：SecondPay
- * 类描述：请求队列管理
- * 创建人：Liangtao
- * 创建时间：2016/7/31 12:14
- * 修改人：Administrator
- * 修改时间：2016/7/31 12:14
- * 修改备注：
+ * Created in Oct 23, 2015 1:00:56 PM.
+ *
+ * @author Yan Zhenjie.
  */
 public class CallServer {
 
@@ -55,15 +66,15 @@ public class CallServer {
     /**
      * 添加一个请求到请求队列.
      *
-     * @param baseActivity   context用来实例化dialog.
+     * @param context   context用来实例化dialog.
      * @param what      用来标志请求, 当多个请求使用同一个{@link HttpListener}时, 在回调方法中会返回这个what.
      * @param request   请求对象.
      * @param callback  结果回调对象.
      * @param canCancel 是否允许用户取消请求.
      * @param isLoading 是否显示dialog.
      */
-    public <T> void add(Activity baseActivity, int what, Request<T> request, HttpListener<T> callback, boolean canCancel, boolean isLoading) {
-        requestQueue.add(what, request, new HttpResponseListener<T>(baseActivity, request, callback, canCancel, isLoading));
+    public <T> void add(Activity context, int what, Request<T> request, HttpListener<T> callback, boolean canCancel, boolean isLoading) {
+        requestQueue.add(what, request, new HttpResponseListener<>(context, request, callback, canCancel, isLoading));
     }
 
     /**

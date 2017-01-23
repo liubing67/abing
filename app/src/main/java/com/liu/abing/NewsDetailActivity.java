@@ -9,6 +9,7 @@ import com.liu.abing.base.BaseActivity;
 import com.liu.extend.constant.Urls;
 import com.tools.Tools;
 import com.tools.http.nohttp.HttpListener;
+import com.tools.util.ToastUtil;
 import com.tools.views.dialog.LoadingDialogView;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
@@ -89,6 +90,7 @@ public class NewsDetailActivity extends BaseActivity {
             // 拿到请求结果
             String result = response.get();
             Log.d("1111111111", "loginresult = " + result);
+            ToastUtil.showShort(NewsDetailActivity.this,result);
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 int rtState = jsonObject.optInt("rtState");
@@ -99,10 +101,9 @@ public class NewsDetailActivity extends BaseActivity {
         }
 
         @Override
-        public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
-//			Log.d(TAG, exception.getMessage());
-        }
+        public void onFailed(int what, Response<String> response) {
 
+        }
     };
 
 

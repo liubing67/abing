@@ -24,27 +24,15 @@ public class ToastUtil {
      * @param context
      * @param message
      */
-//    public static void showShort(Context context, CharSequence message) {
-//        if (isCustom) {
-//            if (null == toast) {
-//                toast = new Toast(context);
-//                toast.setDuration(Toast.LENGTH_SHORT);
-////            toast.setGravity(Gravity.CENTER, 0, 0);
-//            }
-//            View toastRoot = LayoutInflater.from(context).inflate(R.layout.toast, null);
-//            TextView txt = (TextView) toastRoot.findViewById(R.id.message);
-//            txt.setText(message);
-//            toast.setView(toastRoot);
-//        } else {
-//            if (null == toast) {
-//                toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-//                // toast.setGravity(Gravity.CENTER, 0, 0);
-//            } else {
-//                toast.setText(message);
-//            }
-//        }
-//        toast.show();
-//    }
+    public static void showShort(Context context, CharSequence message) {
+        if (toast == null) {
+            toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+            // toast.setGravity(Gravity.CENTER, 0, 0);
+        } else {
+            toast.setText(message);
+        }
+        toast.show();
+    }
 
     /**
      * 短时间显示Toast
@@ -52,27 +40,11 @@ public class ToastUtil {
      * @param context
      * @param message
      */
-//    public static void showShort(Context context, int message) {
-//        if (isCustom) {
-//            if (null == toast) {
-//                toast = new Toast(context);
-//                toast.setDuration(Toast.LENGTH_SHORT);
-////            toast.setGravity(Gravity.CENTER, 0, 0);
-//            }
-//            View toastRoot = LayoutInflater.from(context).inflate(R.layout.toast, null);
-//            TextView txt = (TextView) toastRoot.findViewById(R.id.message);
-//            txt.setText(context.getResources().getText(message));
-//            toast.setView(toastRoot);
-//        } else {
-//            if (null == toast) {
-//                toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
-//                // toast.setGravity(Gravity.CENTER, 0, 0);
-//            } else {
-//                toast.setText(message);
-//            }
-//        }
-//        toast.show();
-//    }
+    public static void showShort(Context context, int message) {
+        toast = Toast.makeText(context, message, Toast.LENGTH_SHORT);
+        // toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
 
     /**
      * 长时间显示Toast
@@ -196,10 +168,10 @@ public class ToastUtil {
             toast.cancel();
         }
     }
-    public static void customShow(Context context , String message)
-    {
+
+    public static void customShow(Context context, String message) {
         LayoutInflater inflater = LayoutInflater.from(context);
-        View layout = inflater.inflate(R.layout.toast_custom,null);
+        View layout = inflater.inflate(R.layout.toast_custom, null);
 
         TextView text = (TextView) layout.findViewById(R.id.tvTextToast);
         text.setText(message);
@@ -210,11 +182,11 @@ public class ToastUtil {
         toast.setView(layout);
         toast.show();
     }
-    public static void customShow(Context context , int resource)
-    {
+
+    public static void customShow(Context context, int resource) {
         String strtext = context.getResources().getString(resource);
         LayoutInflater inflater = LayoutInflater.from(context);
-        View layout = inflater.inflate(R.layout.toast_custom,null);
+        View layout = inflater.inflate(R.layout.toast_custom, null);
 
         TextView text = (TextView) layout.findViewById(R.id.tvTextToast);
         text.setText(strtext);

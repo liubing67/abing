@@ -175,9 +175,10 @@ public class NewsFragment extends Fragment {
 		}
 
 		@Override
-		public void onFailed(int what, String url, Object tag, Exception exception, int responseCode, long networkMillis) {
-//			Log.d(TAG, exception.getMessage());
+		public void onFailed(int what, Response<String> response) {
+
 		}
+
 
 	};
 	public <T> void request(int what, Request<T> request, HttpListener<T> callback, boolean canCancel, boolean isLoading) {

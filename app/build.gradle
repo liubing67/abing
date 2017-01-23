@@ -37,8 +37,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    compile 'com.yolanda.nohttp:nohttp:1.0.4'
-    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+//    compile 'com.squareup.okhttp3:okhttp:3.4.1'
     compile 'com.android.support:recyclerview-v7:24.2.0'
     compile 'com.android.support:design:24.2.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
@@ -55,4 +54,8 @@ dependencies {
     compile files('libs/mpandroidchartlibrary-1-7-4.jar')
     //图表所需
     compile project(path: ':highlights')
+
+    compile 'com.yolanda.nohttp:nohttp:1.1.0'
+    // 如果要使用okhttp作为nohttp底层，请再依赖下面的库，记得与nohttp保持版本的一致
+    compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
 }
