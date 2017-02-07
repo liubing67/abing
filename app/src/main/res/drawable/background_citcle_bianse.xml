@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+//圆角点击并且变色
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@android:color/darker_gray" />//点击的颜色
+
+            <corners android:radius="8px" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="@color/colorOrange" /> //未点击的颜色
+            <corners android:radius="8px" />
+        </shape>
+    </item>
+</selector>
