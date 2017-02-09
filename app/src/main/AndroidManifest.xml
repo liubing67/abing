@@ -66,6 +66,7 @@
             android:windowSoftInputMode="adjustResize" />
         <activity android:name=".dropdownmenu.DropDownMenuActivity"/>
         <activity android:name=".EasyFlipActivity"/>
+        <activity android:name=".dialog.LiuDialogActivity"/>
     </application>
 
 </manifest>

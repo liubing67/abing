@@ -58,4 +58,5 @@ dependencies {
     compile 'com.yolanda.nohttp:nohttp:1.1.0'
     // 如果要使用okhttp作为nohttp底层，请再依赖下面的库，记得与nohttp保持版本的一致
     compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
+    compile project(path: ':liudialog_lib')
 }

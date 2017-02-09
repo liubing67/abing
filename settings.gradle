@@ -1,1 +1,1 @@
-include ':app', ':citypicker', ':highlights'
+include ':app', ':citypicker', ':highlights', ':liudialog_lib'
