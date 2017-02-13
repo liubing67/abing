@@ -1,10 +1,12 @@
 package com.liu.abing;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.util.Log;
@@ -19,9 +21,11 @@ import com.liu.extend.adapters.NewsAdapter;
 import com.liu.extend.entity.Constants;
 import com.liu.extend.entity.NewsEntity;
 import com.liu.extend.constant.Urls;
+import com.orhanobut.logger.Logger;
 import com.tools.Tools;
 import com.tools.http.nohttp.CallServer;
 import com.tools.http.nohttp.HttpListener;
+import com.tools.util.ToastUtil;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
@@ -39,50 +43,84 @@ public class NewsFragment extends Fragment {
 	private final static int SET_NEWSLIST = 0;
 	private View view;
 	private RefreshLayout mRefreshLayout;
+
+	// 标志位，标志已经初始化完成，因为setUserVisibleHint是在onCreateView之前调用的，
+	// 在视图未初始化的时候，在lazyLoad当中就使用的话，就会有空指针的异常
+	private boolean isPrepared;
+	//标志当前页面是否可见
+	private boolean isVisible;
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		initData();
+		Logger.d("onCreate");
 		super.onCreate(savedInstanceState);
+	}
+
+	@Override
+	public void onAttach(Context context) {
+		super.onAttach(context);
+		Logger.d("onAttach");
 	}
 
 	/** 此方法意思为fragment是否可见 ,可见时候加载数据 */
 	@Override
 	public void setUserVisibleHint(boolean isVisibleToUser) {
+		super.setUserVisibleHint(isVisibleToUser);
+		Logger.d("setUserVisibleHint"+isVisibleToUser);
 		if (isVisibleToUser) {
 			//fragment可见时加载数据
-			if(newsList !=null && newsList.size() !=0){
-				handler.obtainMessage(SET_NEWSLIST).sendToTarget();
-			}else{
-				new Thread(new Runnable() {
-					@Override
-					public void run() {
-						// TODO Auto-generated method stub
-						try {
-							Thread.sleep(2);
-						} catch (InterruptedException e) {
-							// TODO Auto-generated catch block
-							e.printStackTrace();
-						}
-						handler.obtainMessage(SET_NEWSLIST).sendToTarget();
-					}
-				}).start();
-			}
+			isVisible = true;
+			lazyLoad();
 		}else{
 			//fragment不可见时不执行操作
+			isVisible = false;
 		}
-		super.setUserVisibleHint(isVisibleToUser);
-	}
 
+	}
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 							 Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		view= LayoutInflater.from(getActivity()).inflate(R.layout.fragment_news, null);
 		initView();
-
+		Logger.d("onCreateView");
 		return view;
 	}
+
+	@Override
+	public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+		super.onViewCreated(view, savedInstanceState);
+		isPrepared = true;
+		lazyLoad();
+	}
+	protected void lazyLoad() {
+		if (!isVisible || !isPrepared) {
+			Logger.d("返回返回");
+			return;
+		}
+
+		Logger.d("请求网络");
+		//getData();//数据请求
+		if(newsList !=null && newsList.size() !=0){
+			handler.obtainMessage(SET_NEWSLIST).sendToTarget();
+		}else{
+			new Thread(new Runnable() {
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					try {
+						Thread.sleep(2);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					handler.obtainMessage(SET_NEWSLIST).sendToTarget();
+				}
+			}).start();
+		}
+	}
+
 
 	private void initData() {
 		newsList = Constants.getNewsList();

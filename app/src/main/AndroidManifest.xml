@@ -67,6 +67,10 @@
         <activity android:name=".dropdownmenu.DropDownMenuActivity"/>
         <activity android:name=".EasyFlipActivity"/>
         <activity android:name=".dialog.LiuDialogActivity"/>
+        <activity android:name=".dialog.BubblePopupActivity"/>
+        <activity android:name=".dialog.CustomPopupActivity"/>
+        <activity android:name=".dialog.PopupHomeActivity"/>
+        <activity android:name=".dialog.SimpleHomeActivity"/>
     </application>
 
 </manifest>

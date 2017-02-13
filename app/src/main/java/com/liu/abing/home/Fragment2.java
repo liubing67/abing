@@ -16,6 +16,7 @@ import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.dialog.LiuDialogActivity;
+import com.liu.abing.dialog.SimpleHomeActivity;
 import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
@@ -165,8 +166,10 @@ public class Fragment2 extends Fragment {
         view.findViewById(R.id.but_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(getActivity(),null,LiuDialogActivity.class);
+                Tools.startActivity(getActivity(),null,SimpleHomeActivity.class);
             }
         });
+
+
     }
 }
