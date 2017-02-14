@@ -21,6 +21,7 @@ import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
 import com.liu.abing.dropdownmenu.DropDownMenuActivity;
+import com.liu.abing.handwrite.SignUsActivity;
 import com.liu.abing.highlight.HighlightActivity;
 import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.refresh.RefreshActivity;
@@ -28,6 +29,7 @@ import com.liu.abing.roll.TextViewRollActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
+import com.liu.abing.stickynav.StickyNavActiviy;
 import com.tools.Tools;
 
 import abing.liu.com.citypicker.CityPickerActivity;
@@ -169,7 +171,18 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,SimpleHomeActivity.class);
             }
         });
-
+        view.findViewById(R.id.but_stickynav).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,StickyNavActiviy.class);
+            }
+        });
+        view.findViewById(R.id.but_sign).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,SignUsActivity.class);
+            }
+        });
 
     }
 }

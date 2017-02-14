@@ -71,6 +71,13 @@
         <activity android:name=".dialog.CustomPopupActivity"/>
         <activity android:name=".dialog.PopupHomeActivity"/>
         <activity android:name=".dialog.SimpleHomeActivity"/>
+        <activity android:name=".stickynav.StickyNavActiviy"/>
+        <activity android:name=".handwrite.SignUsActivity"/>
+        <activity android:name=".handwrite.HandWriteActivity"/>
+        <activity android:name=".handwrite.LandscapeActivity"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar"
+            />
     </application>
 
 </manifest>

@@ -122,6 +122,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="对话框"/>
+            <Button
+                android:id="@+id/but_stickynav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="滑动到底部停留"/>
+            <Button
+                android:id="@+id/but_sign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="签名保存图片"/>
         </LinearLayout>
 
     </ScrollView>

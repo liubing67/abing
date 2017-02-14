@@ -4,6 +4,8 @@ import android.view.WindowManager;
 
 import com.orhanobut.logger.Logger;
 
+import java.util.UUID;
+
 /**
  * 项目名称：abing
  * 类描述：
@@ -45,5 +47,9 @@ public class Android_Note {
 //        }
 //    }
 
+    public static void main(String[] args)
+    {
+        UUID.randomUUID().toString();
+    }
 
 }
