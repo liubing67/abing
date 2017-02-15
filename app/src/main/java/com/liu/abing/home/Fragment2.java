@@ -20,6 +20,7 @@ import com.liu.abing.dialog.SimpleHomeActivity;
 import com.liu.abing.drag.DragActivity;
 import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
+import com.liu.abing.drawphotoview.*;
 import com.liu.abing.dropdownmenu.DropDownMenuActivity;
 import com.liu.abing.handwrite.SignUsActivity;
 import com.liu.abing.highlight.HighlightActivity;
@@ -183,6 +184,11 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,SignUsActivity.class);
             }
         });
-
+        view.findViewById(R.id.but_photo).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, com.liu.abing.drawphotoview.MainActivity.class);
+            }
+        });
     }
 }

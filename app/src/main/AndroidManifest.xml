@@ -78,6 +78,9 @@
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar"
             />
+        <activity android:name=".drawphotoview.DragPhotoActivity"
+            android:theme="@style/translucent"/>
+        <activity android:name=".drawphotoview.MainActivity"/>
     </application>
 
 </manifest>
