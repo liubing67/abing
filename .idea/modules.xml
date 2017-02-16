@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FlycoDialog_Lib/FlycoDialog_Lib.iml" filepath="$PROJECT_DIR$/FlycoDialog_Lib/FlycoDialog_Lib.iml" />
       <module fileurl="file://$PROJECT_DIR$/abing.iml" filepath="$PROJECT_DIR$/abing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidnote/androidnote.iml" filepath="$PROJECT_DIR$/androidnote/androidnote.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/citypicker/citypicker.iml" filepath="$PROJECT_DIR$/citypicker/citypicker.iml" />
       <module fileurl="file://$PROJECT_DIR$/highlights/highlights.iml" filepath="$PROJECT_DIR$/highlights/highlights.iml" />

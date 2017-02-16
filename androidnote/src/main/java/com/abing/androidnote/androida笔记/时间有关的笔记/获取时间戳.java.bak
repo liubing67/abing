@@ -1,0 +1,12 @@
+Date date = new Date();
+SimpleDateFormat sdf = new SimpleDateFormat("yyyyMMddHHmmss");
+String timestamp = sdf.format(date);
+
+
+
+timecurrentTimeMillis = System.currentTimeMillis();
+		timeGetTime = new Date().getTime();
+		timeSeconds = System.currentTimeMillis();
+		timeMillis = Calendar.getInstance().getTimeInMillis();
+
+		具体时间戳转换请看 TimeStamp
