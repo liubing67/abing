@@ -1,9 +1,12 @@
 package com.tools.androidnote;
 
+import android.os.Bundle;
 import android.view.WindowManager;
 
 import com.orhanobut.logger.Logger;
 
+import java.util.Iterator;
+import java.util.Set;
 import java.util.UUID;
 
 /**
@@ -51,5 +54,32 @@ public class Android_Note {
     {
         UUID.randomUUID().toString();
     }
+
+
+
+    /**
+     * //判断intent传值是否包含key值
+     *
+     *  getIntent不知道key获取value
+     * */
+
+//    Intent intent = new Intent(MainActivity.this, IntentActivity.class);
+//    intent.putExtra("name", "zhaotf");
+//    intent.putExtra("age", 110);
+//    startActivity(intent);
+
+//    Bundle bundle = getIntent().getExtras();
+//    Set<String> set = bundle.keySet();
+//    for (Iterator iterator = set.iterator(); iterator.hasNext();) {
+//        String key = (String) iterator.next();
+//        if (key.equals("type"))
+//        {
+//            type= getIntent().getStringExtra("type");
+//            Logger.d(key+"-------type----"+type);
+//            continue;
+//        }
+//        Object value = bundle.get(key);
+//        Logger.d(key+"");
+//    }
 
 }
