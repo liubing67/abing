@@ -25,5 +25,5 @@ public class Urls {
 
 
 
-    public static final String GET_HOME="http://218.80.1.67:8580/crmapi/core/funcs/main/getHomePageData";
+    public static final String GET_HOME="http://testapi.china-madpay.com:8580/crmapi/core/funcs/main/getHomePageData";
 }

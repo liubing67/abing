@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.orhanobut.logger.LogLevel;
+import com.yanzhenjie.nohttp.OkHttpNetworkExecutor;
 import com.yolanda.nohttp.Logger;
 import com.yolanda.nohttp.NoHttp;
 import com.yolanda.nohttp.URLConnectionNetworkExecutor;
@@ -59,7 +60,7 @@ public class BaseApplication extends Application {
                         new DBCookieStore(this).setEnable(false) // 如果不维护cookie，设置false禁用。
                 )
                 // 配置网络层，默认使用URLConnection，如果想用OkHttp：OkHttpNetworkExecutor。
-                .setNetworkExecutor(new URLConnectionNetworkExecutor())
+                .setNetworkExecutor(new OkHttpNetworkExecutor())
         );
 
         // 如果你需要用OkHttp，请依赖下面的项目，version表示版本号：

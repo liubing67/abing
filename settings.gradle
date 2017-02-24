@@ -1,1 +1,1 @@
-include ':app', ':citypicker', ':highlights', ':FlycoDialog_Lib', ':androidnote'
+include ':app', ':citypicker', ':highlights', ':FlycoDialog_Lib', ':androidnote', ':okhttputils'
