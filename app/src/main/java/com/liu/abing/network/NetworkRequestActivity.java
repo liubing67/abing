@@ -21,9 +21,17 @@ import com.yolanda.nohttp.RedirectHandler;
 import com.yolanda.nohttp.RequestMethod;
 import com.yolanda.nohttp.rest.Request;
 import com.yolanda.nohttp.rest.Response;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.callback.StringCallback;
+import com.zhy.http.okhttp.utils.WaitDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import okhttp3.Call;
 
 /**
  * 项目名称：abing
@@ -55,6 +63,49 @@ public class NetworkRequestActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 okHttpRequest();
+            }
+        });
+        findViewById(R.id.but_okhttpString).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Map<String,String> map=new HashMap<String ,String >();
+                map.put("username","13225337940");
+                map.put("password","l123456789");
+                map.put("sign", Tools.getMD5("13225337940"+"l123456789"));
+                OkHttpUtils
+                        .post()
+                        .url(Urls.LOGIN)
+                        .params(map)
+                        .build()
+                        .execute(new StringCallback() {
+                            @Override
+                            public void onError(Call call, Exception e, int id) {
+
+                            }
+
+                            @Override
+                            public void onResponse(String response, int id) {
+                                Logger.d(response);
+                            }
+
+                            @Override
+                            public void onAfter(int id) {
+                                super.onAfter(id);
+                                if (WaitDialog.loadingDialog(NetworkRequestActivity.this).isShowing())
+                                {
+                                    WaitDialog.loadingDialog(NetworkRequestActivity.this).dismiss();
+                                }
+                                Logger.e("onafter");
+                            }
+
+                            @Override
+                            public void onBefore(okhttp3.Request request, int id) {
+                                super.onBefore(request, id);
+
+                                WaitDialog.loadingDialog(NetworkRequestActivity.this);
+                                Logger.e("onbefore");
+                            }
+                        });
             }
         });
     }

@@ -38,7 +38,7 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.2.1'
     testCompile 'junit:junit:4.12'
     compile 'de.hdodenhof:circleimageview:2.1.0'
-    //    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+//    compile 'com.squareup.okhttp3:okhttp:3.6.0'
     compile 'com.android.support:recyclerview-v7:24.2.0'
     compile 'com.android.support:design:24.2.0'
     compile 'com.github.bumptech.glide:glide:3.7.0'
@@ -57,10 +57,12 @@ dependencies {
     compile project(path: ':highlights')
     compile 'com.yolanda.nohttp:nohttp:1.1.0'
     // 如果要使用okhttp作为nohttp底层，请再依赖下面的库，记得与nohttp保持版本的一致
-    compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
+
+    //    compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
     compile project(':FlycoDialog_Lib')
     compile 'com.jakewharton:butterknife:8.2.1'
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile 'com.zhy:base-adapter:2.0.0'
     compile 'com.github.chrisbanes:PhotoView:1.3.1'
+    compile project(':okhttputils')
 }

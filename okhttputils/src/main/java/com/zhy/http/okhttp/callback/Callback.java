@@ -2,6 +2,7 @@ package com.zhy.http.okhttp.callback;
 
 import com.zhy.http.okhttp.request.GetRequest;
 import com.zhy.http.okhttp.request.OkHttpRequest;
+import com.zhy.http.okhttp.utils.WaitDialog;
 
 import okhttp3.Call;
 import okhttp3.Request;
@@ -26,6 +27,8 @@ public abstract class Callback<T>
      */
     public void onAfter(int id)
     {
+
+
     }
 
     /**
