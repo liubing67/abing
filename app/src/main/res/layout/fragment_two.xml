@@ -142,6 +142,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="listview和Edit"/>
+            <Button
+                android:id="@+id/but_keepProcess"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="listview和Edit"/>
         </LinearLayout>
 
     </ScrollView>

@@ -28,6 +28,7 @@ import com.liu.abing.highlight.HighlightActivity;
 import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.refresh.RefreshActivity;
 import com.liu.abing.roll.TextViewRollActivity;
+import com.liu.abing.service.KeepProcessActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
@@ -197,5 +198,13 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,ListEditActivity.class);
             }
         });
+        view.findViewById(R.id.but_keepProcess).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,KeepProcessActivity.class);
+            }
+        });
     }
+
+
 }

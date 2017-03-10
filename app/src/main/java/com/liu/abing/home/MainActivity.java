@@ -1,5 +1,6 @@
 package com.liu.abing.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
 import com.liu.abing.base.BaseApplication;
+import com.liu.abing.service.KeepProcessActivity;
+import com.liu.abing.service.TestService;
+import com.orhanobut.logger.Logger;
 import com.tools.util.pictures.HelperMethod;
 
 import java.util.ArrayList;
@@ -118,6 +122,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     @Override
     protected void onDestroy() {
         super.onDestroy();
+
         BaseApplication.getInstance().exit();
     }
 }
