@@ -12,6 +12,7 @@ import com.liu.abing.EasyFlipActivity;
 import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
+import com.liu.abing.ListEditActivity;
 import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.chart.ChartActivity;
@@ -188,6 +189,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, com.liu.abing.drawphotoview.MainActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_listedit).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,ListEditActivity.class);
             }
         });
     }

@@ -17,8 +17,8 @@ import android.widget.TextView;
 
 public class SimpleHomeActivity extends AppCompatActivity {
     private Context mContext = this;
-    private final String[] mItems = {"Dialog", "Popup"};
-    private final Class<?>[] mClazzs = {LiuDialogActivity.class, PopupHomeActivity.class};
+    private final String[] mItems = {"Dialog", "Popup","SampleActivity"};
+    private final Class<?>[] mClazzs = {LiuDialogActivity.class, PopupHomeActivity.class,SampleActivity.class};
     private DisplayMetrics mDisplayMetrics;
 
     @Override
