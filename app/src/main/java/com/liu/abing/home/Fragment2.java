@@ -34,6 +34,7 @@ import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.liu.abing.stickynav.StickyNavActiviy;
 import com.tools.Tools;
+import com.tools.util.DownloadUtils;
 
 import abing.liu.com.citypicker.CityPickerActivity;
 
@@ -201,7 +202,8 @@ public class Fragment2 extends Fragment {
         view.findViewById(R.id.but_keepProcess).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(getActivity(),null,KeepProcessActivity.class);
+//                Tools.startActivity(getActivity(),null,KeepProcessActivity.class);
+                new DownloadUtils(getActivity()).download("http://www.china-madpay.com/appcheckversion/agentmange.apk","1111");
             }
         });
     }
