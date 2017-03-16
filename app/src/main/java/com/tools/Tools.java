@@ -6,8 +6,13 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.PixelFormat;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,7 +24,12 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import com.bumptech.glide.load.engine.Resource;
+import com.liu.abing.R;
+import com.loc.p;
+
 import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -61,6 +71,8 @@ public class Tools {
             in.putExtras(b);
         }
         ctx.startActivity(in);
+
+
     }
 
 
@@ -421,4 +433,7 @@ public class Tools {
         animator.start();
 
     }
+
+
+
 }
