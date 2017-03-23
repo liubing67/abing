@@ -13,6 +13,7 @@ import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.ListEditActivity;
+import com.liu.abing.RecyclerViewTestActivity;
 import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.chart.ChartActivity;
@@ -204,6 +205,12 @@ public class Fragment2 extends Fragment {
             public void onClick(View v) {
 //                Tools.startActivity(getActivity(),null,KeepProcessActivity.class);
                 new DownloadUtils(getActivity()).download("http://www.china-madpay.com/appcheckversion/agentmange.apk","1111");
+            }
+        });
+        view.findViewById(R.id.but_RecyclerView).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,RecyclerViewTestActivity.class);
             }
         });
     }

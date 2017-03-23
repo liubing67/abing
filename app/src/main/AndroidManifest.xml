@@ -87,6 +87,7 @@
         <activity android:name=".dialog.SampleActivity" />
         <activity android:name=".ListEditActivity" />
         <activity android:name=".service.KeepProcessActivity" />
+        <activity android:name=".RecyclerViewTestActivity" />
 
         <service
             android:name=".service.TestService"

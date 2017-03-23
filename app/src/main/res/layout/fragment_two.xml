@@ -146,7 +146,12 @@
                 android:id="@+id/but_keepProcess"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="listview和Edit"/>
+                android:text="DownloadUtils"/>
+            <Button
+                android:id="@+id/but_RecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="RecyclerView练习"/>
         </LinearLayout>
 
     </ScrollView>
