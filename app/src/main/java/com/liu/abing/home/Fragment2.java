@@ -29,6 +29,7 @@ import com.liu.abing.highlight.HighlightActivity;
 import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.refresh.RefreshActivity;
 import com.liu.abing.roll.TextViewRollActivity;
+import com.liu.abing.securitycode.SecurityCodeActivity;
 import com.liu.abing.service.KeepProcessActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
@@ -211,6 +212,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null,RecyclerViewTestActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_SecurityCode).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,SecurityCodeActivity.class);
             }
         });
     }

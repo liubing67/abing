@@ -152,6 +152,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RecyclerView练习"/>
+            <Button
+                android:id="@+id/but_SecurityCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="验证码"/>
         </LinearLayout>
 
     </ScrollView>

@@ -88,6 +88,7 @@
         <activity android:name=".ListEditActivity" />
         <activity android:name=".service.KeepProcessActivity" />
         <activity android:name=".RecyclerViewTestActivity" />
+        <activity android:name=".securitycode.SecurityCodeActivity" />
 
         <service
             android:name=".service.TestService"

@@ -327,4 +327,6 @@
     <color name="colorRed">#b52913</color>
     <color name="colorGreen">#009687</color>
     <color name="colorOrange">#ff5505</color>
+
+    <color name="common_blue_0090FF">#0090FF</color>
 </resources>
