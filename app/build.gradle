@@ -12,7 +12,7 @@ android {
         }
     }
     compileSdkVersion 24
-    buildToolsVersion "24.0.3"
+    buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.liu.abing"
         minSdkVersion 16
@@ -66,4 +66,5 @@ dependencies {
     compile project(':okhttputils')
 //    compile project(':Dialoglibrary')
     compile 'cn.pedant.sweetalert:library:1.3'
+
 }

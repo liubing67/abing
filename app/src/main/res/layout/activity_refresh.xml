@@ -14,5 +14,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="only  listvieiw"/>
-
+    <Button
+        android:id="@+id/but_Refreshload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="刷新加载"/>
 </LinearLayout>

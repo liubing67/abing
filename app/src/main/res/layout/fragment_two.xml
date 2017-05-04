@@ -157,6 +157,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="验证码"/>
+            <Button
+                android:id="@+id/but_powerful"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="powerfulView"/>
         </LinearLayout>
 
     </ScrollView>

@@ -220,6 +220,7 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,SecurityCodeActivity.class);
             }
         });
+
     }
 
 

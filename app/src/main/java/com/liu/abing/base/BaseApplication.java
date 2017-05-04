@@ -2,6 +2,9 @@ package com.liu.abing.base;
 
 import android.app.Activity;
 import android.app.Application;
+import android.content.Context;
+import android.os.Handler;
+import android.os.Looper;
 
 import com.orhanobut.logger.LogLevel;
 import com.yolanda.nohttp.Logger;
@@ -24,7 +27,39 @@ import java.util.Set;
 public class BaseApplication extends Application {
     private List<Activity> activityList = new LinkedList<Activity>();
     private static BaseApplication instance;
-    private String TAG="ABING";
+    private String TAG = "ABING";
+    private static Context mContext;
+    private static Thread mMainThread;
+    private static long		mMainThreadId;
+    private static Looper mMainLooper;
+    private static Handler mMainHandler;
+
+    public static Context getContext()
+    {
+        return mContext;
+    }
+
+    public static Thread getMainThread()
+    {
+        return mMainThread;
+    }
+
+    public static long getMainThreadId()
+    {
+        return mMainThreadId;
+    }
+
+    public static Looper getMainThreadLooper()
+    {
+        return mMainLooper;
+    }
+
+    public static Handler getMainHandler()
+    {
+        return mMainHandler;
+    }
+
+
     // 单例模式中获取唯一的ExitApplication 实例
     public static BaseApplication getInstance() {
         if (null == instance) {
@@ -68,23 +103,28 @@ public class BaseApplication extends Application {
         // 具体文档请看：https://github.com/yanzhenjie/NoHttp
 
 
-
-
-
-
-
-
-
-
-
-
-
         x.Ext.init(this);
         x.Ext.setDebug(true); // 是否输出debug日志
 
 
         //打印日志
         com.orhanobut.logger.Logger.init(TAG).logLevel(LogLevel.FULL);
+
+
+
+        // 上下文
+        mContext = getApplicationContext();
+
+        // 主线程
+        mMainThread = Thread.currentThread();
+
+        // mMainThreadId = mMainThread.getId();
+        mMainThreadId = android.os.Process.myTid();
+
+        mMainLooper = getMainLooper();
+
+        // 创建主线程的handler
+        mMainHandler = new Handler();
     }
 
     //将所有的activity添加到集合中

@@ -39,6 +39,12 @@ public class RefreshActivity extends BaseActivity {
                 Tools.startActivity(RefreshActivity.this,null,OnlyListViewActivity.class);
             }
         });
+        findViewById(R.id.but_Refreshload).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(RefreshActivity.this,null,RefreshRecyActivity.class);
+            }
+        });
 
     }
 }
