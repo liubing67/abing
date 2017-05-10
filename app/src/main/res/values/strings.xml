@@ -31,4 +31,6 @@
     <string name="wait_dialog_title">请稍候...</string>
     <string name="know">我知道了</string>
     <string name="txt_getMsgCode_validate">""</string>
+
+    <string name="_lease_open_permissions">Please open permissions</string>
 </resources>
