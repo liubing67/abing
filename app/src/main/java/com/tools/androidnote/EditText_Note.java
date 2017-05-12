@@ -6,7 +6,8 @@ package com.tools.androidnote;
 
 public class EditText_Note
 {
-    /**
+
+    /**限制输入类型
     //文本类型，多为大写、小写和数字符号。
     android:inputType="none"
     android:inputType="text"
@@ -42,5 +43,17 @@ public class EditText_Note
     android:inputType="datetime" 时间日期
     android:inputType="date" 日期键盘
     android:inputType="time" 时间键盘
+     */
+
+    /*
+    限制输入长度（如限制输入最大长度10）
+    代码：et_lxnr.setFilters(new InputFilter[]{new InputFilter.LengthFilter(10)});
+    xml：android:maxLength="10"
+     */
+
+    /*
+    限制输入固定的某些字符（如123456xyz）
+    代码：et_lxnr.setKeyListener(DigitsKeyListener.getInstance(“123456xyz”);
+    xml：android:digits="@string/input_num_character"
      */
 }

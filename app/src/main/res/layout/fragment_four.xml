@@ -25,10 +25,12 @@
         android:id="@+id/image_header"
         android:layout_width="79dp"
         android:layout_height="79dp"
-        android:layout_marginTop="70dp"
         android:src="@mipmap/login_icon_headportrait"
         app:civ_border_width="2dp"
         app:civ_border_color="@color/themecolor"
         android:layout_gravity="center"
         />
+    <com.tools.views.CustomA
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
