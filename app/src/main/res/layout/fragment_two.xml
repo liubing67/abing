@@ -161,7 +161,7 @@
                 android:id="@+id/but_powerful"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="透明"/>
+                android:text="壁纸"/>
             <Button
                 android:id="@+id/but_flow"
                 android:layout_width="match_parent"

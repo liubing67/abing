@@ -39,7 +39,12 @@ public class ToumingActivity extends AppCompatActivity {
                         checkSelfPermission();
                     }
                 });
+        findViewById(R.id.text1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
+            }
+        });
 
     }
 

@@ -182,9 +182,11 @@ public class CustomA extends View {
         int hour = calendar.get(Calendar.HOUR_OF_DAY); //时
         int minute = calendar.get(Calendar.MINUTE); //分
         int second = calendar.get(Calendar.SECOND); //秒
-        int angleHour = (hour % 12) * 360 / 12; //时针转过的角度
+        int angleHour = (hour % 11) * 360 / 12; //时针转过的角度
         int angleMinute = minute * 360 / 60; //分针转过的角度
         int angleSecond = second * 360 / 60; //秒针转过的角度
+
+        Logger.d(hour);
 //        //绘制时针
         canvas.save();
         canvas.rotate(angleHour,width,height); //旋转到时针的角度
