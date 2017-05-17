@@ -12,6 +12,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Toast;
 
+import com.tools.Tools;
+
 /**
  * 项目名称：abing
  * 类描述：
@@ -42,7 +44,7 @@ public class ToumingActivity extends AppCompatActivity {
         findViewById(R.id.text1).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Tools.startActivity(ToumingActivity.this,null,VideoWallpaperActivity.class);
             }
         });
 

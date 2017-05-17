@@ -33,5 +33,13 @@ public class ChartActivity extends BaseActivity {
                 Tools.startActivity(ChartActivity.this,null,PieChartActivity.class);
             }
         });
+        findViewById(R.id.but_lines).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(ChartActivity.this,null,SuitLinesActivity.class);
+            }
+        });
+
+
     }
 }

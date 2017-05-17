@@ -136,7 +136,7 @@
                 android:resource="@xml/livewallpaper" />
         </service>
         <activity android:name=".ToumingActivity" />
-        <activity android:name=".VideoWallpaperActivity" />
+        <activity android:name=".chart.SuitLinesActivity" />
     </application>
 
 </manifest>
