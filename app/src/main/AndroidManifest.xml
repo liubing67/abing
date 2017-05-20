@@ -137,6 +137,7 @@
         </service>
         <activity android:name=".ToumingActivity" />
         <activity android:name=".chart.SuitLinesActivity" />
+        <activity android:name=".animator.AnimatorActivity" />
     </application>
 
 </manifest>

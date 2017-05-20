@@ -17,6 +17,7 @@ import com.liu.abing.RecyclerViewTestActivity;
 import com.liu.abing.ToumingActivity;
 import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
+import com.liu.abing.animator.AnimatorActivity;
 import com.liu.abing.chart.ChartActivity;
 import com.liu.abing.dialog.LiuDialogActivity;
 import com.liu.abing.dialog.SimpleHomeActivity;
@@ -232,6 +233,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null,ToumingActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_animator).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,AnimatorActivity.class);
             }
         });
     }

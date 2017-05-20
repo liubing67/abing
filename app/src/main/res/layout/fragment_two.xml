@@ -167,6 +167,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="powerfulView"/>
+            <Button
+                android:id="@+id/but_animator"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="animator"/>
         </LinearLayout>
 
     </ScrollView>
