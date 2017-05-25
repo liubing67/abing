@@ -2,6 +2,8 @@ package com.liu.abing.roll;
 
 import android.os.Bundle;
 import android.support.annotation.LayoutRes;
+import android.text.TextPaint;
+import android.util.TypedValue;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -33,6 +35,7 @@ import java.util.List;
 public class TextViewRollActivity extends BaseActivity {
 
     private MarqueeText text_notify;
+    private TextView tv1,tv2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +46,8 @@ public class TextViewRollActivity extends BaseActivity {
     private void initView()
     {
         text_notify= (MarqueeText) findViewById(R.id.text_notify);
-
+        tv1= (TextView) findViewById(R.id.tv1);
+        tv2= (TextView) findViewById(R.id.tv2);
 
         List<String> datas = Arrays.asList("《赋得古原草送别》", "离离原上草，一岁一枯荣。", "野火烧不尽，春风吹又生。", "远芳侵古道，晴翠接荒城。", "又送王孙去，萋萋满别情。");
         MarqueeView marqueeView1 = (MarqueeView) findViewById(R.id.marqueeView1);
@@ -118,5 +122,29 @@ public class TextViewRollActivity extends BaseActivity {
         vf.addView(View.inflate(this, R.layout.view_advertisement01, null));
         vf.addView(View.inflate(this, R.layout.view_advertisement02, null));
         vf.addView(View.inflate(this, R.layout.view_advertisement03, null));
+
+
+//        adjustTvTextSize(tv2,18,"Hello world 字体大小");
+    }
+
+
+
+
+
+    private void adjustTvTextSize(TextView tv,int maxwidth,String text)
+    {
+        int avaiwidth=maxwidth-tv.getPaddingLeft()-tv.getPaddingRight()-10;
+        if (avaiwidth<=0)
+        {
+            return;
+        }
+        TextPaint textPaint=new TextPaint(tv.getPaint());
+        float trySize=textPaint.getTextSize();
+        while (textPaint.measureText(text)>avaiwidth)
+        {
+            trySize--;
+            textPaint.setTextSize(trySize);
+        }
+        tv.setTextSize(TypedValue.COMPLEX_UNIT_PX,trySize);
     }
 }

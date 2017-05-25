@@ -4,90 +4,114 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
-    <LinearLayout
-        android:id="@+id/rela_notify"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_below="@+id/top_rel"
-        android:background="#ffedd6">
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/rela_notify"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@+id/top_rel"
+                android:background="#ffedd6">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="15dp"
-            android:background="@mipmap/list_icon_notice" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:background="@mipmap/list_icon_notice" />
 
-        <com.tools.views.MarqueeText
-            android:id="@+id/text_notify"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:ellipsize="marquee"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:scrollHorizontally="true"
-            android:marqueeRepeatLimit="marquee_forever"
-            android:singleLine="true"
-            android:text="因提款需经人工审核，提款及客服服务时间为每日 9:00 - 21:00"
-            android:textColor="#ee8800"
-            android:textSize="14sp" />
-    </LinearLayout>
+                <com.tools.views.MarqueeText
+                    android:id="@+id/text_notify"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:scrollHorizontally="true"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text="因提款需经人工审核，提款及客服服务时间为每日 9:00 - 21:00"
+                    android:textColor="#ee8800"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <com.tools.views.roll.MarqueeView
+                android:id="@+id/marqueeView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#88dddddd"/>
 
+            <com.tools.views.roll.MarqueeView
+                android:id="@+id/marqueeView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#88dddddd"
+                app:marqueeAnimDuration="2000"
+                app:marqueeAnimIn="@anim/right_in"
+                app:marqueeAnimOut="@anim/left_out"
+                app:marqueeInterval="2500"/>
 
-    <com.tools.views.roll.MarqueeView
-        android:id="@+id/marqueeView1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#88dddddd"/>
+            <com.tools.views.roll.MarqueeView
+                android:id="@+id/marqueeView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#88dddddd"/>
 
-    <com.tools.views.roll.MarqueeView
-        android:id="@+id/marqueeView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#88dddddd"
-        app:marqueeAnimDuration="2000"
-        app:marqueeAnimIn="@anim/right_in"
-        app:marqueeAnimOut="@anim/left_out"
-        app:marqueeInterval="2500"/>
+            <com.tools.views.roll.MarqueeView
+                android:id="@+id/marqueeView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#88dddddd"/>
 
-    <com.tools.views.roll.MarqueeView
-        android:id="@+id/marqueeView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#88dddddd"/>
+            <com.tools.views.roll.MarqueeView
+                android:id="@+id/marqueeView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="#88dddddd"/>
+            <TextView
+                android:id="@+id/text_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
-    <com.tools.views.roll.MarqueeView
-        android:id="@+id/marqueeView4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#88dddddd"/>
+            <ViewFlipper
+                android:id="@+id/vf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autoStart="true"
+                android:background="#fff"
+                android:flipInterval="3000"
+                android:inAnimation="@anim/anim_marquee_in"
+                android:outAnimation="@anim/anim_marquee_out"
+                android:paddingLeft="30dp" />
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:text="Hello world 字体大小"/>
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:text="Hello world 字体大小"/>
 
-    <com.tools.views.roll.MarqueeView
-        android:id="@+id/marqueeView5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="#88dddddd"/>
-    <TextView
-        android:id="@+id/text_money"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        />
+        </LinearLayout>
+    </ScrollView>
 
-    <ViewFlipper
-        android:id="@+id/vf"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autoStart="true"
-        android:background="#fff"
-        android:flipInterval="3000"
-        android:inAnimation="@anim/anim_marquee_in"
-        android:outAnimation="@anim/anim_marquee_out"
-        android:paddingLeft="30dp" />
 </LinearLayout>
