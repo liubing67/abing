@@ -27,6 +27,7 @@ import com.liu.abing.R;
 import com.liu.abing.drawphotoview.*;
 import com.liu.abing.dropdownmenu.DropDownMenuActivity;
 import com.liu.abing.flow.FlowActivity;
+import com.liu.abing.fragment.FragActivity;
 import com.liu.abing.handwrite.SignUsActivity;
 import com.liu.abing.highlight.HighlightActivity;
 import com.liu.abing.network.NetworkRequestActivity;
@@ -239,6 +240,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null,AnimatorActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_frag).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,FragActivity.class);
             }
         });
     }

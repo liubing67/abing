@@ -172,6 +172,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="animator"/>
+            <Button
+                android:id="@+id/but_frag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fragment"/>
         </LinearLayout>
 
     </ScrollView>
