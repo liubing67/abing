@@ -39,6 +39,7 @@ import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.liu.abing.stickynav.StickyNavActiviy;
+import com.liu.abing.wheel.WheelActivity;
 import com.tools.Tools;
 import com.tools.util.DownloadUtils;
 
@@ -246,6 +247,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null,FragActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_wheel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,WheelActivity.class);
             }
         });
     }

@@ -140,6 +140,8 @@
         <activity android:name=".chart.SuitLinesActivity" />
         <activity android:name=".animator.AnimatorActivity" />
         <activity android:name=".fragment.FragActivity" />
+        <activity android:name=".wheel.WheelActivity" />
+        <activity android:name=".wheel.OtherActivity" />
     </application>
 
 </manifest>

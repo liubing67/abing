@@ -177,6 +177,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Fragment"/>
+            <Button
+                android:id="@+id/but_wheel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="滚轮控件"/>
         </LinearLayout>
 
     </ScrollView>
