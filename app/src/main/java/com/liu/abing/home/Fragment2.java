@@ -1,11 +1,17 @@
 package com.liu.abing.home;
 
+import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.MenuPopupWindow;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.OverScroller;
+import android.widget.PopupWindow;
+import android.widget.ScrollView;
 
 import com.liu.abing.ColorGradActivity;
 import com.liu.abing.EasyFlipActivity;
@@ -19,12 +25,9 @@ import com.liu.abing.VersionActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.animator.AnimatorActivity;
 import com.liu.abing.chart.ChartActivity;
-import com.liu.abing.dialog.LiuDialogActivity;
 import com.liu.abing.dialog.SimpleHomeActivity;
 import com.liu.abing.drag.DragActivity;
-import com.liu.abing.drag.DragLActivity;
 import com.liu.abing.R;
-import com.liu.abing.drawphotoview.*;
 import com.liu.abing.dropdownmenu.DropDownMenuActivity;
 import com.liu.abing.flow.FlowActivity;
 import com.liu.abing.fragment.FragActivity;
@@ -34,7 +37,6 @@ import com.liu.abing.network.NetworkRequestActivity;
 import com.liu.abing.refresh.RefreshActivity;
 import com.liu.abing.roll.TextViewRollActivity;
 import com.liu.abing.securitycode.SecurityCodeActivity;
-import com.liu.abing.service.KeepProcessActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
@@ -42,6 +44,8 @@ import com.liu.abing.stickynav.StickyNavActiviy;
 import com.liu.abing.wheel.WheelActivity;
 import com.tools.Tools;
 import com.tools.util.DownloadUtils;
+import com.tools.views.ObservableScrollView;
+import com.tools.views.ScrollViewListener;
 
 import abing.liu.com.citypicker.CityPickerActivity;
 
@@ -58,6 +62,8 @@ import abing.liu.com.citypicker.CityPickerActivity;
 public class Fragment2 extends Fragment {
 
     private View view;
+    private Button button;
+    private ObservableScrollView seroll;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -68,6 +74,10 @@ public class Fragment2 extends Fragment {
 
     private void initView()
     {
+
+        button= (Button) view.findViewById(R.id.button);
+        seroll= (ObservableScrollView) view.findViewById(R.id.seroll);
+        initData();
         view.findViewById(R.id.but_Slide).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -255,7 +265,48 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,WheelActivity.class);
             }
         });
-    }
 
+    }
+    private void initData()
+    {
+        seroll.setScrollViewListener(new ScrollViewListener() {
+            @Override
+            public void onScrollChanged(ObservableScrollView scrollView, int x, int y, int oldx, int oldy) {
+                if (y>300)
+                {
+                    button.setVisibility(View.GONE);
+                }else {
+                    button.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initPopw();
+            }
+        });
+    }
+    //弹出管理popuwin
+    private void initPopw() {
+        final PopupWindow popupWindow;
+        View view = LayoutInflater.from(getActivity()).inflate(R.layout.ppw_menu, null);
+        popupWindow = new PopupWindow(view, LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT);
+        popupWindow.setFocusable(true);
+        popupWindow.setOutsideTouchable(true);
+        popupWindow.setBackgroundDrawable(new BitmapDrawable());
+        popupWindow.showAtLocation(view, Gravity.CENTER, 0, 0);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (popupWindow.isShowing()) {
+                    popupWindow.dismiss();
+                }
+            }
+        });
+    }
 
 }

@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
     android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,5 +25,45 @@
     <uk.co.senab.photoview.PhotoView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/erha"/>
+        android:src="@mipmap/erha"
+        android:visibility="gone"/>
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="10dp"
+        fab:menu_labels_ellipsize="end"
+        fab:menu_labels_singleLine="true"
+
+        >
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_size="mini"
+            android:src="@mipmap/ic_launcher"
+            fab:fab_label="在线客服" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            fab:fab_size="mini"
+            fab:fab_label="渠道电话" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            fab:fab_size="mini"
+            fab:fab_label="客服电话" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 </LinearLayout>

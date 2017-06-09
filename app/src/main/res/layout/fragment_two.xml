@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/liner1"
         android:layout_width="match_parent"
         android:layout_height="45dip"
         android:background="@color/themecolor"
@@ -20,9 +21,11 @@
             android:textSize="20sp"
             android:textStyle="bold" />
     </LinearLayout>
-    <ScrollView
+    <com.tools.views.ObservableScrollView
+        android:id="@+id/seroll"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/liner1">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -182,7 +185,24 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="滚轮控件"/>
+            <Button
+                android:id="@+id/but_float"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="floatButton"/>
         </LinearLayout>
 
-    </ScrollView>
-</LinearLayout>
+    </com.tools.views.ObservableScrollView>
+    <Button
+        android:id="@+id/button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/background_floatingab"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        android:text="联系\n我们"
+        android:gravity="center"
+        />
+</RelativeLayout>
