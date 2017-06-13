@@ -5,6 +5,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
 
 import com.liu.abing.R;
 
@@ -25,7 +27,18 @@ public class Fragment3 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         view =inflater.inflate(R.layout.fragment_three, container, false);
-
+        initView();
         return view;
+    }
+    private void initView()
+    {
+        final LinearLayout linar= (LinearLayout) view.findViewById(R.id.linar);
+        final Button button= (Button) view.findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                linar.scrollBy(-100,0);
+            }
+        });
     }
 }
