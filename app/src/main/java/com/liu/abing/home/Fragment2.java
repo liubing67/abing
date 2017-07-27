@@ -22,6 +22,7 @@ import com.liu.abing.ListEditActivity;
 import com.liu.abing.RecyclerViewTestActivity;
 import com.liu.abing.ToumingActivity;
 import com.liu.abing.VersionActivity;
+import com.liu.abing.WaveActivity;
 import com.liu.abing.ZoominActivity;
 import com.liu.abing.animator.AnimatorActivity;
 import com.liu.abing.chart.ChartActivity;
@@ -265,7 +266,12 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,WheelActivity.class);
             }
         });
-
+        view.findViewById(R.id.but_waveview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null,WaveActivity.class);
+            }
+        });
     }
     private void initData()
     {

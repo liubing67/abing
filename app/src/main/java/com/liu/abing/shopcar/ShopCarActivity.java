@@ -125,6 +125,13 @@ public class ShopCarActivity extends BaseActivity implements UpdateView, View.On
             }
         });
 
+        mExpandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+                return true;
+            }
+        });
+
 
     }
 

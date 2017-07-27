@@ -35,5 +35,17 @@
         />
     <com.tools.views.CustomA
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/btn_change"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="即刷"
+        android:gravity="center"
+        android:background="@drawable/background_floatingab"
+        android:focusable="false"
+
+        />
 </LinearLayout>
