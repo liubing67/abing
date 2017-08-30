@@ -195,6 +195,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="水波纹"/>
+
+            <Button
+                android:id="@+id/but_customCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="水波纹"/>
+            <Button
+                android:id="@+id/but_customEdit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="自定义输入框"/>
         </LinearLayout>
 
     </com.tools.views.ObservableScrollView>
