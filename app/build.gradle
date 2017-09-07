@@ -69,4 +69,6 @@ dependencies {
     apt 'com.jakewharton:butterknife-compiler:8.2.1'
     compile 'com.github.clans:fab:1.6.4'
     compile 'com.github.maning0303:MClearEditText:V1.1.0'
+    compile 'com.youth.banner:banner:+'
+
 }

@@ -2,6 +2,7 @@ package com.liu.abing.slide;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
@@ -10,6 +11,8 @@ import com.tools.Tools;
 import com.tools.util.ToastUtil;
 import com.tools.views.UpRollView;
 import com.tools.views.viewpager.LViewPager;
+import com.youth.banner.Banner;
+import com.youth.banner.listener.OnBannerListener;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,10 +26,11 @@ import java.util.List;
  * 修改时间：2016/12/12 11:25
  * 修改备注：
  */
-public class SlideActivity extends BaseActivity {
+public class SlideActivity extends BaseActivity implements OnBannerListener {
 
     LViewPager lviewpager;
     private UpRollView roll;
+    Banner banner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +43,9 @@ public class SlideActivity extends BaseActivity {
         // Viewpager 设置
         lviewpager= (LViewPager) findViewById(R.id.lviewpager);
         List<String> list=new ArrayList<String>();
+//        list.add("http://www.china-madpay.com/crmapp/banner/home_banner.png");
         list.add("http://misc02.china-madpay.com//group1//M00//1B//08//tKkRB1fNSwmAZBeFAACh1izuNSA271.jpg");
-        list.add("http://misc02.china-madpay.com//group1//M00//1B//08//tKkRB1fNSwmAZBeFAACh1izuNSA271.jpg");
-        list.add("http://misc02.china-madpay.com//group1//M00//1B//08//tKkRB1fNSwmAZBeFAACh1izuNSA271.jpg");
+//        list.add("http://misc02.china-madpay.com//group1//M00//1B//08//tKkRB1fNSwmAZBeFAACh1izuNSA271.jpg");
         lviewpager.setImageUrl(list);
 
         lviewpager.setOnItemClickListener(new LViewPager.onItemClickListener() {
@@ -65,5 +69,17 @@ public class SlideActivity extends BaseActivity {
                 Tools.startActivity(SlideActivity.this,null, RecyclerViewSlideActivity.class);
             }
         });
+
+        banner = (Banner) findViewById(R.id.banner);
+
+        banner.setImages(list)
+                .setImageLoader(new GlideImageLoader())
+                .setOnBannerListener(this)
+                .start();
+    }
+
+    @Override
+    public void OnBannerClick(int position) {
+        Toast.makeText(getApplicationContext(),"你点击了："+position,Toast.LENGTH_SHORT).show();
     }
 }
