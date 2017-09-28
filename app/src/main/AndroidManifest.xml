@@ -86,7 +86,7 @@
         <activity android:name=".dialog.SampleActivity" />
         <activity android:name=".ListEditActivity" />
         <activity android:name=".service.KeepProcessActivity" />
-        <activity android:name=".RecyclerViewTestActivity" />
+        <activity android:name=".recyclerviewtest.RecyclerViewTestActivity" />
         <activity android:name=".securitycode.SecurityCodeActivity" />
         <activity android:name=".refresh.RefreshRecyActivity" />
         <activity android:name=".flow.FlowActivity" />

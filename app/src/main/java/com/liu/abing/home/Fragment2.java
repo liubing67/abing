@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.OverScroller;
 import android.widget.PopupWindow;
-import android.widget.ScrollView;
 
 import com.liu.abing.ColorGradActivity;
 import com.liu.abing.CusEditActivity;
@@ -20,7 +18,7 @@ import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.ListEditActivity;
-import com.liu.abing.RecyclerViewTestActivity;
+import com.liu.abing.recyclerviewtest.RecyclerViewTestActivity;
 import com.liu.abing.ToumingActivity;
 import com.liu.abing.VersionActivity;
 import com.liu.abing.WaveActivity;

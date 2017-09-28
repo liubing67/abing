@@ -51,5 +51,9 @@
         <item>aa</item>
     </string-array>
 
-
+    <string-array name="pill">
+        <item>渠道服务</item>
+        <item>商户服务</item>
+        <item>综合服务</item>
+    </string-array>
 </resources>
