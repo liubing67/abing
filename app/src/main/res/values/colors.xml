@@ -328,6 +328,11 @@
     <color name="colorGreen">#009687</color>
     <color name="colorOrange">#ff5505</color>
     <color name="colorgreen">#00A59B</color>
-
+    <color name="background">#f1f1f1</color>
     <color name="common_blue_0090FF">#0090FF</color>
+    <color name="water">#55000000</color>
+    <color name="cardview_shadow_end_color">#1adc5252</color>
+    <color name="cardview_shadow_start_color">#1aca0e0e</color>
+    <color name="cardview_dark_background">#FF424242</color>
+    <color name="cardview_light_background">#FFFFFFFF</color>
 </resources>

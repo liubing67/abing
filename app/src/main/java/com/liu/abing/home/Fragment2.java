@@ -1,8 +1,12 @@
 package com.liu.abing.home;
 
+import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,6 +46,7 @@ import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.liu.abing.stickynav.StickyNavActiviy;
 import com.liu.abing.wheel.WheelActivity;
+import com.orhanobut.logger.Logger;
 import com.tools.Tools;
 import com.tools.util.DownloadUtils;
 import com.tools.views.ObservableScrollView;
@@ -81,7 +86,61 @@ public class Fragment2 extends Fragment {
         view.findViewById(R.id.but_Slide).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Tools.startActivity(getActivity(),null, SlideActivity.class);
+//                Tools.startActivity(getActivity(),null, SlideActivity.class);
+                String BOARD = Build.BOARD;
+                String DEVICE = Build.DEVICE;
+                String DISPLAY = Build.DISPLAY;
+                String FINGERPRINT = Build.FINGERPRINT;
+                String HARDWARE = Build.HARDWARE;
+                String HOST = Build.HOST;
+                String MANUFACTURER = Build.MANUFACTURER;
+                String USER = Build.USER;
+                String ID = Build.ID;
+                String MODEL = Build.MODEL;
+                String PRODUCT = Build.PRODUCT;
+                String SERIAL = Build.SERIAL;
+                String TAGS = Build.TAGS;
+                String TYPE = Build.TYPE;
+                String BRAND  = Build.BRAND ;
+                String BOOTLOADER  = Build.BOOTLOADER ;
+                StringBuilder aaa = new StringBuilder();
+                aaa.append("\nBOARD = " + BOARD);
+                aaa.append("\nDEVICE = " + DEVICE);
+                aaa.append("\nDISPLAY = " +DISPLAY);
+                aaa.append("\nFINGERPRINT = " + FINGERPRINT);
+                aaa.append("\nHARDWARE = " + HARDWARE);
+                aaa.append("\nHOST = " +HOST);
+                aaa.append("\nMANUFACTURER = " + MANUFACTURER);
+                aaa.append("\nUSER = " + USER);
+                aaa.append("\nID = " + ID);
+                aaa.append("\nMODEL = " + MODEL);
+                aaa.append("\nPRODUCT = " + PRODUCT);
+                aaa.append("\nSERIAL = " + SERIAL);
+                aaa.append("\nTAGS = " + TAGS);
+                aaa.append("\nTYPE = " + TYPE);
+                aaa.append("\nBRAND  = " + BRAND );
+                aaa.append("\nBOOTLOADER  = " + BOOTLOADER );
+                aaa.append("\nHARDWARE   = " + HARDWARE  );
+                aaa.append("\nSERIAL    = " + SERIAL   );
+                Log.e("infoaaa", Tools.getDeviceInfo());
+                TelephonyManager tm = (TelephonyManager) getActivity().getSystemService(Context.TELEPHONY_SERVICE);
+                StringBuilder sb = new StringBuilder();
+                sb.append("\nDeviceId(IMEI) = " + tm.getDeviceId());
+                sb.append("\nDeviceSoftwareVersion = " + tm.getDeviceSoftwareVersion());
+                sb.append("\nLine1Number = " + tm.getLine1Number());
+                sb.append("\nNetworkCountryIso = " + tm.getNetworkCountryIso());
+                sb.append("\nNetworkOperator = " + tm.getNetworkOperator());
+                sb.append("\nNetworkOperatorName = " + tm.getNetworkOperatorName());
+                sb.append("\nNetworkType = " + tm.getNetworkType());
+                sb.append("\nPhoneType = " + tm.getPhoneType());
+                sb.append("\nSimCountryIso = " + tm.getSimCountryIso());
+                sb.append("\nSimOperator = " + tm.getSimOperator());
+                sb.append("\nSimOperatorName = " + tm.getSimOperatorName());
+                sb.append("\nSimSerialNumber = " + tm.getSimSerialNumber());
+                sb.append("\nSimState = " + tm.getSimState());
+                sb.append("\nSubscriberId(IMSI) = " + tm.getSubscriberId());
+                sb.append("\nVoiceMailNumber = " + tm.getVoiceMailNumber());
+                Log.e("info", sb.toString());
             }
         });
         view.findViewById(R.id.but_roll).setOnClickListener(new View.OnClickListener() {

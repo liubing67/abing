@@ -71,4 +71,5 @@ dependencies {
     compile 'com.github.maning0303:MClearEditText:V1.1.0'
     compile 'com.youth.banner:banner:+'
 
+    compile project(path: ':androidnote')
 }
