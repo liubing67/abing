@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-apply plugin: 'android-apt'
 // 依赖插件脚本
 apply from: 'tinker-support.gradle'
 android {
@@ -12,7 +11,7 @@ android {
         }
     }
     compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.liu.abing"
         minSdkVersion 16
@@ -27,6 +26,13 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.config
         }
+    }
+    dexOptions {
+        incremental true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 }
 
@@ -46,7 +52,7 @@ dependencies {
     //    compile 'com.yanzhenjie.nohttp:okhttp:1.1.0'
     compile project(':FlycoDialog_Lib')
     compile project(':okhttputils')
-//    compile project(':Dialoglibrary')
+    //    compile project(':Dialoglibrary')
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'de.hdodenhof:circleimageview:2.1.0'
     compile 'com.android.support:recyclerview-v7:24.2.0'
@@ -66,10 +72,9 @@ dependencies {
     compile 'cn.pedant.sweetalert:library:1.3'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
-    apt 'com.jakewharton:butterknife-compiler:8.2.1'
+    annotationProcessor  'com.jakewharton:butterknife-compiler:8.2.1'
     compile 'com.github.clans:fab:1.6.4'
     compile 'com.github.maning0303:MClearEditText:V1.1.0'
     compile 'com.youth.banner:banner:+'
-
     compile project(path: ':androidnote')
 }
