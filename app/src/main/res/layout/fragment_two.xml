@@ -206,6 +206,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="自定义输入框"/>
+            <Button
+                android:id="@+id/but_weiboline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="微博顶部线"/>
         </LinearLayout>
 
     </com.tools.views.ObservableScrollView>

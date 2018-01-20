@@ -42,11 +42,10 @@ import com.liu.abing.refresh.RefreshActivity;
 import com.liu.abing.roll.TextViewRollActivity;
 import com.liu.abing.securitycode.SecurityCodeActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
-import com.liu.abing.slide.SlideActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.liu.abing.stickynav.StickyNavActiviy;
+import com.liu.abing.weiboline.*;
 import com.liu.abing.wheel.WheelActivity;
-import com.orhanobut.logger.Logger;
 import com.tools.Tools;
 import com.tools.util.DownloadUtils;
 import com.tools.views.ObservableScrollView;
@@ -342,6 +341,13 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null,CusEditActivity.class);
             }
         });
+        view.findViewById(R.id.but_weiboline).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, WeiBoLineActivity.class);
+            }
+        });
+
     }
     private void initData()
     {
