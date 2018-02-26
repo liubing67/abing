@@ -50,7 +50,9 @@ public class Tools {
     /**
      * 0x00 GetMoneyActivity
      * 0x01 AdviceToUsActivity
+     *
      */
+
 
     public static SimpleDateFormat formatDate = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
     public static SimpleDateFormat formatDay = new SimpleDateFormat("d", Locale.getDefault());
