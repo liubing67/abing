@@ -211,6 +211,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="微博顶部线"/>
+            <Button
+                android:id="@+id/but_vlayoout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="阿里vlayoout框架"/>
         </LinearLayout>
 
     </com.tools.views.ObservableScrollView>

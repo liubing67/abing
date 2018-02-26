@@ -145,6 +145,7 @@
         <activity android:name=".WaveActivity" />
         <activity android:name=".CusEditActivity" />
         <activity android:name=".weiboline.WeiBoLineActivity" />
+        <activity android:name=".vlayout.VLayoutActivity" />
     </application>
 
 </manifest>

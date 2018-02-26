@@ -44,6 +44,7 @@ import com.liu.abing.securitycode.SecurityCodeActivity;
 import com.liu.abing.shopcar.ShopCarActivity;
 import com.liu.abing.steps.StepsHActivity;
 import com.liu.abing.stickynav.StickyNavActiviy;
+import com.liu.abing.vlayout.VLayoutActivity;
 import com.liu.abing.weiboline.*;
 import com.liu.abing.wheel.WheelActivity;
 import com.tools.Tools;
@@ -345,6 +346,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, WeiBoLineActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_vlayoout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, VLayoutActivity.class);
             }
         });
 
