@@ -38,5 +38,7 @@ public class CusEditActivity extends BaseActivity {
                 Toast.makeText(mContext, "点击了清除按钮", Toast.LENGTH_SHORT).show();
             }
         });
+
+
     }
 }

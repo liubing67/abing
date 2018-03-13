@@ -22,6 +22,8 @@ import com.liu.abing.R;
  */
 public class Fragment3 extends Fragment {
 
+
+
     private View view;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

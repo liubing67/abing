@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<shby>
+	<update>
+		<wp7></wp7>
+		<ios>
+			<promptMsg>true</promptMsg>
+			<forceUpdate>true</forceUpdate>
+			<versionCode>21</versionCode>			
+			<versionName>2.0.3</versionName>
+			<updateLog><![CDATA[1.修复晒单功能保存问题。2.修复机具分配的刷新功能。3.优化银行卡信息修改功能。4.修复部分机型出现的闪退。5.修复其它已知bug]]></updateLog>
+			<nCIsOpen>false</nCIsOpen>
+			<nCName>卡果</nCName>
+			<nCIcon>http://www.china-madpay.com/crmapp/img/zhanye_icon_wuka.png</nCIcon>
+		</ios>
+		<android>
+			<versionCode>18</versionCode>
+			<versionName>V2.0.1</versionName>
+			<downloadUrl>http://imtt.dd.qq.com/16891/C53ECA84BBDD1D71D9FE5B5425A9D284.apk?fsname=com.shby.agentmanage_2.0.1_18.apk&amp;csr=1bbd</downloadUrl>
+			<updateLog><![CDATA[1.增加商户列表搜索功能。2.修复已知bug]]></updateLog>
+			<coverUpdate>false</coverUpdate>
+			<forceUpdate>1</forceUpdate>
+			<coverStartDate>2015-12-14</coverStartDate>
+			<coverEndDate>2016-10-26</coverEndDate>
+			<nCIsOpen>false</nCIsOpen>
+			<nCName>卡果</nCName>
+			<nCIcon>http://www.china-madpay.com/crmapp/img/zhanye_icon_wuka.png</nCIcon>
+		</android>
+	</update>
+</shby>
