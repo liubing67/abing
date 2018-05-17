@@ -64,7 +64,7 @@ public class CustomA extends View {
         drawMinuteLine(canvas, paint3, getWidth() / 2, getHeight() / 2);
 
         paintPointer(canvas, getWidth() / 2, getHeight() / 2);
-
+        canvas.save();
         canvas.restore();
         //刷新
         postInvalidateDelayed(1000);

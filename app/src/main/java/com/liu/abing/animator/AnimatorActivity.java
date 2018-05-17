@@ -39,7 +39,7 @@ public class AnimatorActivity extends BaseActivity {
     @OnClick(R.id.button)
     public void onClick() {
 //        slideview(0,500);
-//        scale();
+        scale();
     }
 
     //平移动画

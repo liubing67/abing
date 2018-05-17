@@ -3,6 +3,8 @@ package com.liu.abing.refresh;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.demievil.library.RefreshLayout;
@@ -39,6 +41,12 @@ public class OnlyListViewActivity extends BaseActivity {
                 R.color.google_green,
                 R.color.light_green,
                 R.color.red);
+        listviewMessage.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
         //下拉刷新
         swipeContainer.setOnRefreshListener(new RefreshLayout.OnRefreshListener() {
             @Override
