@@ -8,8 +8,11 @@ import android.view.View;
 
 import com.liu.abing.R;
 import com.liu.abing.steps.step.fragment.StepActivity;
+import com.liu.extend.entity.CityBean;
 import com.tools.Tools;
 import com.tools.views.steps.StepsView;
+
+import org.greenrobot.eventbus.EventBus;
 
 /**
  * 项目名称：abing
@@ -60,6 +63,8 @@ public class StepsHActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(StepsHActivity.this,null, StepActivity.class);
+//                EventBus.getDefault().post("StepsHActivity btn clicked");
+//                finish();
             }
         });
     }

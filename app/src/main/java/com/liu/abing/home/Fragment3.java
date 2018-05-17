@@ -9,6 +9,10 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 import com.liu.abing.R;
+import com.liu.extend.entity.CityBean;
+import com.tools.util.ToastUtil;
+
+import org.greenrobot.eventbus.EventBus;
 
 
 /**
@@ -39,7 +43,9 @@ public class Fragment3 extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                linar.scrollBy(-100,0);
+//                linar.scrollBy(-100,0);
+                ToastUtil.showShort(getActivity(),"一点击");
+                EventBus.getDefault().post("fragment 3  btn clicked");
             }
         });
     }
