@@ -1,4 +1,4 @@
-package com.tools.util;
+﻿package com.tools.util;
 
 import android.os.Handler;
 
