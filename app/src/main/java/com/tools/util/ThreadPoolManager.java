@@ -1,4 +1,4 @@
-﻿package com.tools.util;
+package com.tools.util;
 
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
