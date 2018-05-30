@@ -2,6 +2,8 @@ package abing.liu.com.abing;
 
 import org.junit.Test;
 
+import java.util.HashMap;
+
 import static org.junit.Assert.*;
 
 /**
@@ -13,5 +15,9 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
+
+//        HashMap
+
+
     }
 }

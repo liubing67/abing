@@ -146,6 +146,8 @@
         <activity android:name=".CusEditActivity" />
         <activity android:name=".weiboline.WeiBoLineActivity" />
         <activity android:name=".vlayout.VLayoutActivity" />
+        <activity android:name="com.liu.abing.recyclertab.MainActivity" />
+        <activity android:name="com.liu.abing.recyclertab.MultiActivity" />
     </application>
 
 </manifest>

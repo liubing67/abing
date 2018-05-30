@@ -6,4 +6,6 @@
           android:orderInCategory="100"
           android:title="settting"
           app:showAsAction="never"/>
+    <item android:id="@+id/item_jump"
+        android:title="选择性更新悬浮条Demo"/>
 </menu>

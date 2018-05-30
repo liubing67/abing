@@ -22,6 +22,7 @@ import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.ListEditActivity;
+import com.liu.abing.recyclertab.*;
 import com.liu.abing.recyclerviewtest.RecyclerViewTestActivity;
 import com.liu.abing.ToumingActivity;
 import com.liu.abing.VersionActivity;
@@ -352,6 +353,12 @@ public class Fragment2 extends Fragment {
             @Override
             public void onClick(View v) {
                 Tools.startActivity(getActivity(),null, VLayoutActivity.class);
+            }
+        });
+        view.findViewById(R.id.but_RecyclerView1).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, com.liu.abing.recyclertab.MainActivity.class);
             }
         });
 
