@@ -3,10 +3,12 @@ package com.liu.abing.animator;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
+import android.view.animation.AnimationUtils;
 import android.view.animation.OvershootInterpolator;
 import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.liu.abing.R;
 import com.liu.abing.base.BaseActivity;
@@ -34,6 +36,11 @@ public class AnimatorActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_animator);
         ButterKnife.bind(this);
+
+        ImageView img_down = (ImageView)findViewById(R.id.img_down);
+        AnimationSet animationSet = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.down_anim);
+        img_down.startAnimation(animationSet);
+
     }
 
     @OnClick(R.id.button)
