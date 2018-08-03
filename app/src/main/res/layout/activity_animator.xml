@@ -21,4 +21,34 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="30dp"
         />
+
+
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="播放摇摆动画" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:src="@drawable/clock_top" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/clock_bg"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/iv_swing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:visibility="visible"
+            android:scaleType="fitCenter"
+            android:src="@drawable/clock_bottom" />
+    </LinearLayout>
 </LinearLayout>

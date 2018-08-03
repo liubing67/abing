@@ -1,6 +1,7 @@
 package com.liu.abing.animator;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
@@ -30,7 +31,7 @@ public class AnimatorActivity extends BaseActivity {
 
     @BindView(R.id.button)
     Button button;
-
+    private SwingAnimation swingAnimation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,8 @@ public class AnimatorActivity extends BaseActivity {
         AnimationSet animationSet = (AnimationSet) AnimationUtils.loadAnimation(this, R.anim.down_anim);
         img_down.startAnimation(animationSet);
 
+        initSwing();
+        findViewById(R.id.iv_swing).startAnimation(swingAnimation);
     }
 
     @OnClick(R.id.button)
@@ -112,4 +115,16 @@ public class AnimatorActivity extends BaseActivity {
         button.startAnimation(animationSet);
     }
 
+    private void initSwing(){
+        //参数取值说明：中间度数、摆到左侧的度数、摆到右侧的度数、圆心X坐标类型、圆心X坐标相对比例、圆心Y坐标类型、圆心Y坐标相对比例
+        //坐标类型有三种：ABSOLUTE 绝对坐标，RELATIVE_TO_SELF 相对自身的坐标，RELATIVE_TO_PARENT 相对上级视图的坐标
+        //X坐标相对比例，为0时表示左边顶点，为1表示右边顶点，为0.5表示水平中心点
+        //Y坐标相对比例，为0时表示上边顶点，为1表示下边顶点，为0.5表示垂直中心点
+        swingAnimation = new SwingAnimation(
+                0f, 60f, -60f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.0f);
+        swingAnimation.setDuration(4000);     //动画持续时间
+        swingAnimation.setRepeatCount(0);     //动画重播次数
+        swingAnimation.setFillAfter(false);  //是否保持动画结束画面
+        swingAnimation.setStartOffset(500);   //动画播放延迟
+    }
 }

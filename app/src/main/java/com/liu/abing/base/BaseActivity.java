@@ -1,6 +1,7 @@
 package com.liu.abing.base;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import com.orhanobut.logger.Logger;
@@ -25,6 +26,10 @@ public class BaseActivity extends AppCompatActivity {
 
     protected String TAG;
     /**
+            * 记录当前最顶部的Activity
+     */
+    private static BaseActivity sTopActivity = null;
+    /**
      * 请求的队列
      */
 //    protected RequestQueue requestQueue;
@@ -35,7 +40,7 @@ public class BaseActivity extends AppCompatActivity {
         TAG = this.getClass().getSimpleName();
         BaseApplication.getInstance().addFinishActivity(TAG,BaseActivity.this);
 //        requestQueue = NoHttp.newRequestQueue();
-
+        sTopActivity = this; // 确保最新一个Activity创建后，TopActivity立马指向它，此时一些操作可以在onCreate函数执行
     }
 
 
@@ -67,5 +72,13 @@ public class BaseActivity extends AppCompatActivity {
     protected void onDestroy() {
         CallServer.getRequestInstance().cancelBySign(this);
         super.onDestroy();
+    }
+
+    public static Handler getUIHandler() {
+        Handler handler = sTopActivity.getWindow().getDecorView().getHandler();
+        if (handler == null) {
+            handler = new Handler();
+        }
+        return handler;
     }
 }

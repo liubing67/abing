@@ -22,6 +22,7 @@ import com.liu.abing.FastBlurActivity;
 import com.liu.abing.HintPopWActivity;
 import com.liu.abing.IndexBarActivity;
 import com.liu.abing.ListEditActivity;
+import com.liu.abing.leonids.ExampleListActivity;
 import com.liu.abing.recyclertab.*;
 import com.liu.abing.recyclerviewtest.RecyclerViewTestActivity;
 import com.liu.abing.ToumingActivity;
@@ -361,7 +362,12 @@ public class Fragment2 extends Fragment {
                 Tools.startActivity(getActivity(),null, com.liu.abing.recyclertab.MainActivity.class);
             }
         });
-
+        view.findViewById(R.id.but_leonids).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Tools.startActivity(getActivity(),null, ExampleListActivity.class);
+            }
+        });
     }
     private void initData()
     {

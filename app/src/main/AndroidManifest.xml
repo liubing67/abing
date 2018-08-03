@@ -148,6 +148,22 @@
         <activity android:name=".vlayout.VLayoutActivity" />
         <activity android:name="com.liu.abing.recyclertab.MainActivity" />
         <activity android:name="com.liu.abing.recyclertab.MultiActivity" />
+
+        <activity android:name="com.liu.abing.leonids.ExampleListActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.OneShotSimpleExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.FireworksExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.OneShotAdvancedExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.EmiterSimpleExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.EmiterBackgroundSimpleExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.EmiterIntermediateExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.EmiterTimeLimitedExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.AnimatedParticlesExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.ConfettiExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.DustExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.StarsExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.FollowCursorExampleActivity" />
+        <activity android:name="com.liu.abing.leonids.leonids.EmiterWithGravityExampleActivity" />
+        <activity android:name="com.liu.abing.BombViewActivity" />
     </application>
 
 </manifest>

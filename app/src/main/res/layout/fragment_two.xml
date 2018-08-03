@@ -221,6 +221,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="RecyclerView顶部悬浮"/>
+            <Button
+                android:id="@+id/but_leonids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="动画"/>
         </LinearLayout>
 
     </com.tools.views.ObservableScrollView>
